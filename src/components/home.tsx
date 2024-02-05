@@ -13,7 +13,7 @@ export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center text-center">
       <div className="relative">
         <Image
           src={picture}
@@ -23,9 +23,13 @@ export default function Home() {
           quality={95}
           className="rounded-full"
         />
-        <span className="absolute right-1 bottom-1 text-3xl">👋</span>
+        <span className="absolute bottom-1 right-1 text-3xl">👋</span>
       </div>
-      <h1>Hello, my name is Miha and I am a full-stack developer.</h1>
+      <h1 className="text-2xl">
+        <b>Hello, my name is Miha.</b> I'm a <b>computer science student</b> and
+        I love building web applications, especially with <i>React</i> and{" "}
+        <i>Next.js</i>
+      </h1>
       <motion.ul
         className="flex gap-x-2"
         initial={{ y: 100, opacity: 0 }}
@@ -36,8 +40,8 @@ export default function Home() {
             href="#contact"
             onPointerEnter={() => setIsHovered(true)}
             onPointerLeave={() => setIsHovered(false)}
-            className="bg-slate-900 text-white rounded-full flex justify-center items-center gap-x-2 h-10 w-48
-              hover:bg-slate-950 hover:scale-105 cursor-pointer transition"
+            className="flex h-10 w-48 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-slate-900 text-white
+              transition hover:scale-105 hover:bg-slate-950"
           >
             Send me an email{" "}
             {isHovered ? <IoMailOpenOutline /> : <IoMailOutline />}
@@ -48,8 +52,8 @@ export default function Home() {
           <a
             href="/CV.pdf"
             download
-            className="bg-slate-100 border border-slate-300 border-opacity-50 rounded-full flex justify-center items-center gap-x-2 h-10 w-40
-              hover:scale-105 transition"
+            className="flex h-10 w-40 items-center justify-center gap-x-2 rounded-full border border-slate-300 border-opacity-50 bg-slate-100
+              transition hover:scale-105"
           >
             Download CV <RiFileDownloadLine />
           </a>
@@ -58,8 +62,8 @@ export default function Home() {
           {/* TODO: polish up linkedin profile, add the link to it */}
           <a
             href="https://linkedin.com"
-            className="bg-slate-100 border border-slate-300 border-opacity-50 rounded-full flex justify-center items-center h-10 w-10
-              hover:scale-105 transition"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 border-opacity-50 bg-slate-100
+              transition hover:scale-105"
           >
             <FaLinkedin />
           </a>
@@ -67,8 +71,8 @@ export default function Home() {
         <li>
           <a
             href="https://github.com/MhcVintar"
-            className="bg-slate-100 border border-slate-300 border-opacity-50 rounded-full flex justify-center items-center h-10 w-10
-              hover:scale-105 transition"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 border-opacity-50 bg-slate-100
+              transition hover:scale-105"
           >
             <FaGithub />
           </a>
