@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const links = [
   {
@@ -31,9 +32,27 @@ const links = [
 ] as const;
 
 export default function Header() {
+  const [state, setState] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > 110) {
+        setState(true);
+      } else {
+        setState(false);
+      }
+    }
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <motion.header
-      className="fixed top-5 left-1/2 -translate-x-1/2 bg-slate-200 rounded-full shadow-lg border border-slate-300 border-opacity-50"
+      className={`${
+        state ? "fixed top-4" : "absolute top-32"
+      } left-1/2 -translate-x-1/2 bg-slate-200 rounded-full shadow-lg border border-slate-300 border-opacity-50`}
       initial={{ x: "-50%", y: -100, opacity: 0 }}
       animate={{ x: "-50%", y: 0, opacity: 1 }}
     >
