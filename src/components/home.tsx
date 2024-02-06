@@ -29,17 +29,34 @@ export default function Home() {
             duration: 0.2,
           }}
         />
-        <span className="absolute bottom-1 right-1 text-3xl transition group-hover:rotate-[30deg]">
-          👋
-        </span>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 125,
+            delay: 0.2,
+          }}
+        >
+          <span
+            className="absolute bottom-1 right-1 text-3xl transition
+            group-hover:rotate-[30deg]"
+          >
+            👋
+          </span>
+        </motion.div>
       </div>
-      <h1 className="py-6 text-2xl">
+      <motion.h1
+        className="py-6 text-2xl"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
         <b>Hello, my name is Miha.</b> I'm a <b>computer science student</b> and
         I love building web applications, especially with <i>React</i> and{" "}
         <i>Next.js</i>
-      </h1>
+      </motion.h1>
       <motion.ul
-        className="flex gap-x-2"
+        className="flex gap-x-2.5"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
@@ -48,8 +65,9 @@ export default function Home() {
             href="#contact"
             onPointerEnter={() => setIsHovered(true)}
             onPointerLeave={() => setIsHovered(false)}
-            className="flex h-11 w-48 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-slate-900 text-white
-              transition hover:scale-105 hover:bg-slate-950"
+            className="flex h-11 w-48 cursor-pointer items-center
+            justify-center gap-x-2 rounded-full border border-amber-400
+            bg-amber-300 transition hover:scale-105 hover:bg-amber-400"
           >
             Send me an email{" "}
             {isHovered ? <IoMailOpenOutline /> : <IoMailOutline />}
@@ -60,8 +78,9 @@ export default function Home() {
           <a
             href="/CV.pdf"
             download
-            className="flex h-10 w-40 items-center justify-center gap-x-2 rounded-full border border-slate-300 border-opacity-50 bg-slate-100
-              transition hover:scale-105"
+            className="flex h-10 w-40 items-center justify-center gap-x-2
+            rounded-full border border-blue-200 border-opacity-50 bg-blue-100
+            transition hover:scale-105 hover:bg-blue-200"
           >
             Download CV <RiFileDownloadLine />
           </a>
@@ -70,8 +89,9 @@ export default function Home() {
           {/* TODO: polish up linkedin profile, add the link to it */}
           <a
             href="https://linkedin.com"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 border-opacity-50 bg-slate-100
-              transition hover:scale-105"
+            className="flex h-10 w-10 items-center justify-center rounded-full
+            border border-blue-200 border-opacity-50 bg-blue-100 transition
+            hover:scale-110 hover:bg-blue-200"
           >
             <FaLinkedin />
           </a>
@@ -79,8 +99,9 @@ export default function Home() {
         <li>
           <a
             href="https://github.com/MhcVintar"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 border-opacity-50 bg-slate-100
-              transition hover:scale-105"
+            className="flex h-10 w-10 items-center justify-center rounded-full
+            border border-blue-200 border-opacity-50 bg-blue-100
+            transition hover:scale-110 hover:bg-blue-200"
           >
             <FaGithub />
           </a>
