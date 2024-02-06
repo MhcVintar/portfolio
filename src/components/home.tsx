@@ -18,7 +18,10 @@ export default function Home() {
   const [isDownloadCVHovered, setIsDownloadCVHovered] = useState(false);
 
   return (
-    <div className="flex w-[55rem] flex-col items-center text-center">
+    <section
+      id="#home"
+      className="flex w-[55rem] flex-col items-center text-center"
+    >
       <div className="group relative transition hover:scale-110">
         <MotionImage
           src={picture}
@@ -52,12 +55,12 @@ export default function Home() {
         </motion.div>
       </div>
       <motion.h1
-        className="py-6 text-2xl"
+        className="py-6 text-3xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <b>Hello, my name is Miha.</b> I'm a <b>computer science student</b>
-        and I love building web applications, especially with <i>React</i>
+        <b>Hello, my name is Miha.</b> I'm a <b>computer science student </b>
+        and I love building web applications, especially with <i>React </i>
         and <i>Next.js</i>
       </motion.h1>
       <motion.ul
@@ -116,6 +119,6 @@ export default function Home() {
           </a>
         </li>
       </motion.ul>
-    </div>
+    </section>
   );
 }

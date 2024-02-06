@@ -7,7 +7,7 @@ export default function HomePage() {
     <main className="mt-24 flex max-w-[80rem] flex-col items-center rounded-xl bg-white px-36 pt-32">
       <Home />
       <SectionDivider />
-      {/* <About /> */}
+      <About />
     </main>
   );
 }
