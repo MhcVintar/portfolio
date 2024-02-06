@@ -5,25 +5,25 @@ import { useEffect } from "react";
 import SectionHeading from "./section-heading";
 
 const skills = [
+  "Python",
+  "Java",
   "C",
   "C++",
-  "Java",
-  "Python",
+  "HTML",
+  "CSS",
+  "TailwindCSS",
+  "Framer Motion",
   "JavaScript",
   "TypeScript",
+  "Node.js",
+  "Express",
   "React",
+  "Next.js",
   "PostgreSQL",
   "Prisma",
   "Git",
-  "Node.js",
-  "Express",
-  "Next.js",
-  "HTML",
-  "CSS",
   "Docker",
   "Kubernetes",
-  "Framer Motion",
-  "TailwindCSS",
 ];
 
 export default function Skills() {
