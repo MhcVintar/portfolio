@@ -8,7 +8,7 @@ export default function SectionDivider() {
       xmlns="http://www.w3.org/2000/svg"
       width="74.68"
       height="153.13"
-      className="my-16"
+      className="my-24"
     >
       <motion.line
         x1="15.62"

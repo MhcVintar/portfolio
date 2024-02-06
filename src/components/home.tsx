@@ -19,8 +19,8 @@ export default function Home() {
 
   return (
     <section
-      id="#home"
-      className="flex w-[55rem] flex-col items-center text-center"
+      id="home"
+      className="flex w-[55rem] scroll-mt-96 flex-col items-center text-center"
     >
       <div className="group relative transition hover:scale-110">
         <MotionImage

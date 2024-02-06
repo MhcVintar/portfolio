@@ -7,9 +7,9 @@ import { useEffect, useState } from "react";
 const links = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
-  { name: "Education", href: "#education" },
+  { name: "Skills", href: "#skills" },
+  { name: "Education & Experience", href: "#education&experience" },
   { name: "Contact", href: "#contact" },
 ] as const;
 
@@ -40,7 +40,7 @@ export default function Header() {
     >
       <nav>
         <ul
-          className="flex h-16 w-[35rem] items-center justify-center gap-y-2
+          className="flex h-16 w-[43rem] items-center justify-center gap-y-2
           rounded-full border border-blue-200 border-opacity-50 bg-blue-100
           bg-opacity-95 text-lg shadow-2xl"
         >
