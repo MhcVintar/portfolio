@@ -39,7 +39,7 @@ export default function Header() {
       animate={{ x: "-50%", y: 0, opacity: 1 }}
     >
       <nav>
-        <ul className="flex h-16 w-[35rem] items-center justify-center gap-y-2 rounded-full bg-blue-100 bg-opacity-95 text-lg shadow-2xl">
+        <ul className="flex h-16 w-[35rem] items-center justify-center gap-y-2 rounded-full border border-blue-200 border-opacity-50 bg-blue-100 bg-opacity-95 text-lg shadow-2xl">
           {links.map((link, index) => (
             <li key={index}>
               <Link

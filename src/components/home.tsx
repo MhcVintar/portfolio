@@ -1,31 +1,39 @@
 "use client";
 
 import picture from "@public/portrait.jpg";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMailOpenOutline, IoMailOutline } from "react-icons/io5";
 import { RiFileDownloadLine } from "react-icons/ri";
 import { motion } from "framer-motion";
+import { MotionImage } from "./framer-motion-wrappers";
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="flex flex-col items-center text-center">
-      <div className="relative">
-        <Image
+    <div className="flex w-[55rem] flex-col items-center text-center">
+      <div className="group relative transition hover:scale-110">
+        <MotionImage
           src={picture}
           alt="Miha portrait"
           height="120"
           width="120"
           quality={95}
-          className="rounded-full"
+          className="rounded-full border-4 border-blue-200"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            type: "tween",
+            duration: 0.2,
+          }}
         />
-        <span className="absolute bottom-1 right-1 text-3xl">👋</span>
+        <span className="absolute bottom-1 right-1 text-3xl transition group-hover:rotate-[30deg]">
+          👋
+        </span>
       </div>
-      <h1 className="text-2xl">
+      <h1 className="py-6 text-2xl">
         <b>Hello, my name is Miha.</b> I'm a <b>computer science student</b> and
         I love building web applications, especially with <i>React</i> and{" "}
         <i>Next.js</i>
@@ -40,7 +48,7 @@ export default function Home() {
             href="#contact"
             onPointerEnter={() => setIsHovered(true)}
             onPointerLeave={() => setIsHovered(false)}
-            className="flex h-10 w-48 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-slate-900 text-white
+            className="flex h-11 w-48 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-slate-900 text-white
               transition hover:scale-105 hover:bg-slate-950"
           >
             Send me an email{" "}
@@ -48,7 +56,7 @@ export default function Home() {
           </Link>
         </li>
         <li>
-          {/* TODO: add the CV into the public folder */}
+          {/* TODO: polish up the CV.pdf */}
           <a
             href="/CV.pdf"
             download
