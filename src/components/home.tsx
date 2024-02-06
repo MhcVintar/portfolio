@@ -1,16 +1,21 @@
 "use client";
 
 import picture from "@public/portrait.jpg";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { IoMailOpenOutline, IoMailOutline } from "react-icons/io5";
-import { RiFileDownloadLine } from "react-icons/ri";
-import { motion } from "framer-motion";
+import {
+  FaEnvelope,
+  FaEnvelopeOpenText,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
+import { HiDocument, HiDocumentArrowDown } from "react-icons/hi2";
 import { MotionImage } from "./framer-motion-wrappers";
 
 export default function Home() {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isEmailMeHovered, setIsEmailMeHovered] = useState(false);
+  const [isDownloadCVHovered, setIsDownloadCVHovered] = useState(false);
 
   return (
     <div className="flex w-[55rem] flex-col items-center text-center">
@@ -51,9 +56,9 @@ export default function Home() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <b>Hello, my name is Miha.</b> I'm a <b>computer science student</b> and
-        I love building web applications, especially with <i>React</i> and{" "}
-        <i>Next.js</i>
+        <b>Hello, my name is Miha.</b> I'm a <b>computer science student</b>
+        and I love building web applications, especially with <i>React</i>
+        and <i>Next.js</i>
       </motion.h1>
       <motion.ul
         className="flex gap-x-2.5"
@@ -63,14 +68,15 @@ export default function Home() {
         <li>
           <Link
             href="#contact"
-            onPointerEnter={() => setIsHovered(true)}
-            onPointerLeave={() => setIsHovered(false)}
+            onPointerEnter={() => setIsEmailMeHovered(true)}
+            onPointerLeave={() => setIsEmailMeHovered(false)}
             className="flex h-11 w-48 cursor-pointer items-center
             justify-center gap-x-2 rounded-full border border-amber-400
-            bg-amber-300 transition hover:scale-105 hover:bg-amber-400"
+            bg-amber-300 font-medium transition hover:scale-105
+            hover:bg-amber-400"
           >
             Send me an email{" "}
-            {isHovered ? <IoMailOpenOutline /> : <IoMailOutline />}
+            {isEmailMeHovered ? <FaEnvelopeOpenText /> : <FaEnvelope />}
           </Link>
         </li>
         <li>
@@ -78,11 +84,14 @@ export default function Home() {
           <a
             href="/CV.pdf"
             download
+            onPointerEnter={() => setIsDownloadCVHovered(true)}
+            onPointerLeave={() => setIsDownloadCVHovered(false)}
             className="flex h-10 w-40 items-center justify-center gap-x-2
             rounded-full border border-blue-200 border-opacity-50 bg-blue-100
-            transition hover:scale-105 hover:bg-blue-200"
+            font-medium transition hover:scale-105 hover:bg-blue-200"
           >
-            Download CV <RiFileDownloadLine />
+            Download CV
+            {isDownloadCVHovered ? <HiDocumentArrowDown /> : <HiDocument />}
           </a>
         </li>
         <li>

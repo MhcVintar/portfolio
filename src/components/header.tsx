@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const links = [
   { name: "Home", href: "#home" },
@@ -48,8 +48,8 @@ export default function Header() {
             <li key={index}>
               <Link
                 href={link.href}
-                className="rounded-full px-3.5 py-3 transition
-                hover:bg-blue-200 hover:text-slate-950"
+                className="rounded-full px-3.5 py-3 font-medium
+                transition hover:bg-blue-200 hover:text-slate-950"
               >
                 {link.name}
               </Link>
