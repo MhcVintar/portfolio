@@ -7,7 +7,7 @@ export default function About() {
   return (
     <motion.section
       id="about"
-      className="mb-24 w-[55rem] scroll-mt-24 text-center"
+      className="mb-32 w-[55rem] scroll-mt-24 text-center"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}

@@ -37,7 +37,7 @@ export default function Skills() {
   }, [isInView]);
 
   return (
-    <section id="skills" className="mb-24 w-[55rem] scroll-mt-24 text-center">
+    <section id="skills" className="mb-32 w-[55rem] scroll-mt-24 text-center">
       <SectionHeading>My skills</SectionHeading>
       <ul ref={ref} className="flex flex-wrap justify-center gap-2">
         {skills.map((skill, index) => (
