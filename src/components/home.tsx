@@ -12,14 +12,17 @@ import {
 } from "react-icons/fa";
 import { HiDocument, HiDocumentArrowDown } from "react-icons/hi2";
 import { MotionImage } from "./framer-motion-wrappers";
+import { useSectionInView } from "@/hooks";
 
 export default function Home() {
   const [isEmailMeHovered, setIsEmailMeHovered] = useState(false);
   const [isDownloadCVHovered, setIsDownloadCVHovered] = useState(false);
+  const sectionRef = useSectionInView("Home", 1);
 
   return (
     <section
       id="home"
+      ref={sectionRef}
       className="flex w-[55rem] scroll-mt-96 flex-col items-center text-center"
     >
       <div className="group relative transition hover:scale-110">

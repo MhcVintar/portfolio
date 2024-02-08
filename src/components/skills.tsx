@@ -4,10 +4,12 @@ import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
 import SectionHeading from "./section-heading";
 import { skills } from "@/data";
+import { useSectionInView } from "@/hooks";
 
 export default function Skills() {
-  const [ref, animate] = useAnimate();
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const [ulRef, animate] = useAnimate();
+  const isInView = useInView(ulRef, { once: true, amount: 0.5 });
+  const sectionRef = useSectionInView("Skills", 0.75);
 
   useEffect(() => {
     if (isInView) {
@@ -16,15 +18,19 @@ export default function Skills() {
   }, [isInView]);
 
   return (
-    <section id="skills" className="mb-32 w-[55rem] scroll-mt-24 text-center">
+    <section
+      id="skills"
+      ref={sectionRef}
+      className="mb-32 w-[55rem] scroll-mt-24 text-center"
+    >
       <SectionHeading>My skills</SectionHeading>
-      <ul ref={ref} className="flex flex-wrap justify-center gap-2">
+      <ul ref={ulRef} className="flex flex-wrap justify-center gap-2">
         {skills.map((skill, index) => (
           <motion.li
             key={index}
             className="rounded-lg border border-blue-200 bg-blue-100 px-4 py-2
             text-lg"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 100 }}
           >
             {skill}
           </motion.li>

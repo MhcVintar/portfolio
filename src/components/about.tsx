@@ -1,12 +1,16 @@
 "use client";
 
+import SectionHeading from "@/components/section-heading";
+import { useSectionInView } from "@/hooks";
 import { motion } from "framer-motion";
-import SectionHeading from "./section-heading";
 
 export default function About() {
+  const sectionRef = useSectionInView("About", 1);
+
   return (
     <motion.section
       id="about"
+      ref={sectionRef}
       className="mb-32 w-[55rem] scroll-mt-24 text-center"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}

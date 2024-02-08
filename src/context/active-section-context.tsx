@@ -10,7 +10,7 @@ import {
   useState,
 } from "react";
 
-type SectionType = (typeof links)[number]["name"];
+export type SectionType = (typeof links)[number]["name"];
 type ActiveSectionContextType = {
   activeSection: SectionType;
   setActiveSection: Dispatch<SetStateAction<SectionType>>;
