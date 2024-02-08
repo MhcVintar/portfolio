@@ -1,55 +1,35 @@
 "use client";
 
+import { useActiveSection } from "@/context/active-section-context";
+import { links } from "@/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-
-const links = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Projects", href: "#projects" },
-  { name: "Skills", href: "#skills" },
-  { name: "Education & Experience", href: "#education&experience" },
-  { name: "Contact", href: "#contact" },
-] as const;
 
 export default function Header() {
-  const [isFixed, setIsFixed] = useState(false);
-
-  useEffect(() => {
-    function handleScroll() {
-      if (window.scrollY > 110) {
-        setIsFixed(true);
-      } else {
-        setIsFixed(false);
-      }
-    }
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const { activeSection, setActiveSection } = useActiveSection();
 
   return (
     <motion.header
-      className={`${
-        isFixed ? "fixed top-4" : "absolute top-32"
-      } left-1/2 z-50 -translate-x-1/2`}
-      initial={{ x: "-50%", y: -100, opacity: 0 }}
-      animate={{ x: "-50%", y: 0, opacity: 1 }}
+      className="sticky left-1/2 top-4 z-10 mt-32"
+      initial={{ opacity: 0, y: -100, x: "-50%" }}
+      animate={{ opacity: 1, y: 1, x: "-50%" }}
     >
       <nav>
         <ul
           className="flex h-16 w-[43rem] items-center justify-center gap-y-2
           rounded-full border border-blue-200 border-opacity-50 bg-blue-100
-          bg-opacity-95 text-lg shadow-2xl"
+          bg-opacity-90 text-lg shadow-2xl"
         >
           {links.map((link, index) => (
-            <li key={index}>
+            <li
+              key={index}
+              className={`rounded-full px-3.5 py-2 font-medium
+              transition hover:bg-blue-200 hover:text-slate-950
+              ${activeSection === link.name && "bg-blue-200"}`}
+            >
               <Link
                 href={link.href}
-                className="rounded-full px-3.5 py-3 font-medium
-                transition hover:bg-blue-200 hover:text-slate-950"
+                onClick={() => setActiveSection(link.name)}
               >
                 {link.name}
               </Link>

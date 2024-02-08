@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
+import ActiveSectionContextProvider from "@/context/active-section-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,12 +17,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-[5000px]">
+    <html lang="en" className="h-[5000px] scroll-smooth">
       <body
-        className={`${inter.className} flex items-center justify-center bg-blue-200 bg-circuit-board`}
+        className={`${inter.className} flex flex-col items-center justify-center bg-blue-200 bg-circuit-board`}
       >
-        <Header />
-        {children}
+        <ActiveSectionContextProvider>
+          <Header />
+          {children}
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );

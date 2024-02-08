@@ -3,28 +3,7 @@
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
 import SectionHeading from "./section-heading";
-
-const skills = [
-  "Python",
-  "Java",
-  "C",
-  "C++",
-  "HTML",
-  "CSS",
-  "TailwindCSS",
-  "Framer Motion",
-  "JavaScript",
-  "TypeScript",
-  "Node.js",
-  "Express",
-  "React",
-  "Next.js",
-  "PostgreSQL",
-  "Prisma",
-  "Git",
-  "Docker",
-  "Kubernetes",
-];
+import { skills } from "@/data";
 
 export default function Skills() {
   const [ref, animate] = useAnimate();

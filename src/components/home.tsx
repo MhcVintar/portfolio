@@ -90,7 +90,7 @@ export default function Home() {
             onPointerEnter={() => setIsDownloadCVHovered(true)}
             onPointerLeave={() => setIsDownloadCVHovered(false)}
             className="flex h-10 w-40 items-center justify-center gap-x-2
-            rounded-full border border-blue-200 border-opacity-50 bg-blue-100
+            rounded-full border border-blue-200 bg-blue-100
             font-medium transition hover:scale-105 hover:bg-blue-200"
           >
             Download CV
@@ -102,7 +102,7 @@ export default function Home() {
           <a
             href="https://linkedin.com"
             className="flex h-10 w-10 items-center justify-center rounded-full
-            border border-blue-200 border-opacity-50 bg-blue-100 transition
+            border border-blue-200 bg-blue-100 transition
             hover:scale-110 hover:bg-blue-200"
           >
             <FaLinkedin />
@@ -112,7 +112,7 @@ export default function Home() {
           <a
             href="https://github.com/MhcVintar"
             className="flex h-10 w-10 items-center justify-center rounded-full
-            border border-blue-200 border-opacity-50 bg-blue-100
+            border border-blue-200 bg-blue-100
             transition hover:scale-110 hover:bg-blue-200"
           >
             <FaGithub />

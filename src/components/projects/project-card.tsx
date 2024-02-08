@@ -24,16 +24,21 @@ export default function ProjectCard({
     <motion.article
       ref={ref}
       style={{ scale: transformedProgress, opacity: transformedProgress }}
-      className="relative h-96 overflow-hidden rounded-lg border border-blue-100 bg-blue-50"
+      className="relative h-96 overflow-hidden rounded-lg
+      border border-blue-100 bg-blue-50"
     >
-      <div className="flex h-full w-1/2 flex-col px-10 py-8 text-left group-odd:ml-[28rem]">
+      <div
+        className="flex h-full w-1/2 flex-col px-10 py-8 text-left
+        group-odd:ml-[28rem]"
+      >
         <h3 className="mb-2 text-2xl font-semibold capitalize">{title}</h3>
         <p>{description}</p>
         <ul className="mt-auto flex flex-wrap gap-2">
           {tags.map((tag, index) => (
             <li
               key={index}
-              className="rounded-full border border-amber-400 bg-amber-300 px-2.5 py-0.5"
+              className="rounded-full border border-amber-400 bg-amber-300
+              px-2.5 py-0.5"
             >
               {tag}
             </li>
@@ -44,7 +49,11 @@ export default function ProjectCard({
         src={image}
         alt={title}
         quality={95}
-        className="absolute top-8 h-full w-[36rem] rounded-t-xl object-cover transition group-odd:-left-40 group-even:-right-40 group-hover:-translate-y-5 group-hover:scale-105 group-odd:group-hover:translate-x-4 group-odd:group-hover:rotate-6 group-even:group-hover:-translate-x-4 group-even:group-hover:-rotate-6"
+        className="absolute top-8 h-full w-[36rem] rounded-t-xl object-cover
+        transition group-odd:-left-40 group-even:-right-40
+        group-hover:-translate-y-5 group-hover:scale-105
+        group-odd:group-hover:translate-x-4 group-odd:group-hover:rotate-6
+        group-even:group-hover:-translate-x-4 group-even:group-hover:-rotate-6"
       />
     </motion.article>
   );
