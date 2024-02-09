@@ -76,7 +76,7 @@ export default function Home() {
             href="#contact"
             onPointerEnter={() => setIsEmailMeHovered(true)}
             onPointerLeave={() => setIsEmailMeHovered(false)}
-            className="flex h-11 w-48 cursor-pointer items-center
+            className="flex h-10 w-48 cursor-pointer items-center
             justify-center gap-x-2 rounded-full border border-amber-400
             bg-amber-300 font-medium transition hover:scale-105
             hover:bg-amber-400 hover:text-slate-950"

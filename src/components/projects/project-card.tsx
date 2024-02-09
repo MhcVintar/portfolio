@@ -37,7 +37,7 @@ export default function ProjectCard({
           {tags.map((tag, index) => (
             <li
               key={index}
-              className="rounded-full border border-amber-400 bg-amber-300
+              className="rounded-full border border-amber-300 bg-amber-200
               px-2.5 py-0.5"
             >
               {tag}

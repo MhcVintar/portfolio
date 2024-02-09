@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <motion.header
-      className="sticky left-1/2 top-4 z-10 mt-32"
+      className="sticky left-1/2 top-4 z-50 mt-32"
       initial={{ opacity: 0, y: -100, x: "-50%" }}
       animate={{ opacity: 1, y: 1, x: "-50%" }}
     >

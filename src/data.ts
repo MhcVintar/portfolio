@@ -87,6 +87,7 @@ export const educationAndExperience = [
     description:
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
       "cillum sint consectetur cupidatat.",
+    link: "https://www.fri.uni-lj.si/en",
     icon: React.createElement(FaUniversity),
   },
   {
@@ -95,6 +96,8 @@ export const educationAndExperience = [
     description:
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
       "cillum sint consectetur cupidatat.",
+    link: "https://www.isystemlabs.si/",
+    jobReference: "/references/iSystem-reference.pdf",
     icon: React.createElement(FaMicrochip),
   },
   {
@@ -103,6 +106,7 @@ export const educationAndExperience = [
     description:
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
       "cillum sint consectetur cupidatat.",
+    link: "https://www.fri.uni-lj.si/en",
     icon: React.createElement(FaUniversity),
   },
 ] as const;
