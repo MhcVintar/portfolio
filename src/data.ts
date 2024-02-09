@@ -2,13 +2,16 @@ import musifyImage from "@public/projects/musify.png";
 import dockerImage from "@public/projects/docker-compose.jpg";
 import kubernetesImage from "@public/projects/microk8s.png";
 import sudokuImage from "@public/projects/sudoku.png";
+import { FaUniversity } from "react-icons/fa";
+import { FaMicrochip } from "react-icons/fa6";
+import React from "react";
 
 export const links = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
-  { name: "Education & Experience", href: "#education&experience" },
+  { name: "Education & Experience", href: "#education-and-experience" },
   { name: "Contact", href: "#contact" },
 ] as const;
 
@@ -75,4 +78,31 @@ export const skills = [
   "Git",
   "Docker",
   "Kubernetes",
+] as const;
+
+export const educationAndExperience = [
+  {
+    title: "First year of University",
+    date: new Date("2023-2-2"),
+    description:
+      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
+      "cillum sint consectetur cupidatat.",
+    icon: React.createElement(FaUniversity),
+  },
+  {
+    title: "iSystem internship",
+    date: new Date("2023-2-2"),
+    description:
+      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
+      "cillum sint consectetur cupidatat.",
+    icon: React.createElement(FaMicrochip),
+  },
+  {
+    title: "Second year of University",
+    date: new Date("2023-2-2"),
+    description:
+      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
+      "cillum sint consectetur cupidatat.",
+    icon: React.createElement(FaUniversity),
+  },
 ] as const;

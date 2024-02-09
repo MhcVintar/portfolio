@@ -25,7 +25,7 @@ export default function ProjectCard({
       ref={ref}
       style={{ scale: transformedProgress, opacity: transformedProgress }}
       className="relative h-96 overflow-hidden rounded-lg
-      border border-blue-100 bg-blue-50"
+      border border-blue-200 bg-blue-100"
     >
       <div
         className="flex h-full w-1/2 flex-col px-10 py-8 text-left

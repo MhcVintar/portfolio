@@ -79,7 +79,7 @@ export default function Home() {
             className="flex h-11 w-48 cursor-pointer items-center
             justify-center gap-x-2 rounded-full border border-amber-400
             bg-amber-300 font-medium transition hover:scale-105
-            hover:bg-amber-400"
+            hover:bg-amber-400 hover:text-slate-950"
           >
             Send me an email{" "}
             {isEmailMeHovered ? <FaEnvelopeOpenText /> : <FaEnvelope />}
@@ -94,7 +94,7 @@ export default function Home() {
             onPointerLeave={() => setIsDownloadCVHovered(false)}
             className="flex h-10 w-40 items-center justify-center gap-x-2
             rounded-full border border-blue-200 bg-blue-100
-            font-medium transition hover:scale-105 hover:bg-blue-200"
+            font-medium transition hover:scale-105 hover:bg-blue-200 hover:text-slate-950"
           >
             Download CV
             {isDownloadCVHovered ? <HiDocumentArrowDown /> : <HiDocument />}
@@ -108,7 +108,7 @@ export default function Home() {
             border border-blue-200 bg-blue-100 transition
             hover:scale-110 hover:bg-blue-200"
           >
-            <FaLinkedin />
+            <FaLinkedin className="text-2xl hover:text-slate-950" />
           </a>
         </li>
         <li>
@@ -118,7 +118,7 @@ export default function Home() {
             border border-blue-200 bg-blue-100
             transition hover:scale-110 hover:bg-blue-200"
           >
-            <FaGithub />
+            <FaGithub className="text-2xl hover:text-slate-950" />
           </a>
         </li>
       </motion.ul>

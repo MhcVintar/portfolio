@@ -1,4 +1,5 @@
 import About from "@/components/about";
+import EducationAndExperience from "@/components/education-and-experience/education-and-experience";
 import Home from "@/components/home";
 import Projects from "@/components/projects/projects";
 import SectionDivider from "@/components/section-divider";
@@ -12,6 +13,7 @@ export default function HomePage() {
       <About />
       <Projects />
       <Skills />
+      <EducationAndExperience />
     </main>
   );
 }
