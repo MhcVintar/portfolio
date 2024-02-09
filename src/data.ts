@@ -83,7 +83,8 @@ export const skills = [
 export const educationAndExperience = [
   {
     title: "First year of University",
-    date: new Date("2023-2-2"),
+    dateBegin: new Date("2023-2-2"),
+    dateEnd: new Date("2024-2-2"),
     description:
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
       "cillum sint consectetur cupidatat.",
@@ -92,7 +93,8 @@ export const educationAndExperience = [
   },
   {
     title: "iSystem internship",
-    date: new Date("2023-2-2"),
+    dateBegin: new Date("2023-2-2"),
+    dateEnd: new Date("2023-2-2"),
     description:
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
       "cillum sint consectetur cupidatat.",
@@ -102,7 +104,8 @@ export const educationAndExperience = [
   },
   {
     title: "Second year of University",
-    date: new Date("2023-2-2"),
+    dateBegin: new Date("2023-2-2"),
+    dateEnd: new Date("2023-2-2"),
     description:
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
       "cillum sint consectetur cupidatat.",

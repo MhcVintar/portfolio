@@ -104,6 +104,7 @@ export default function Home() {
           {/* TODO: polish up linkedin profile, add the link to it */}
           <a
             href="https://linkedin.com"
+            target="_blank"
             className="flex h-10 w-10 items-center justify-center rounded-full
             border border-blue-200 bg-blue-100 transition
             hover:scale-110 hover:bg-blue-200"
@@ -114,6 +115,7 @@ export default function Home() {
         <li>
           <a
             href="https://github.com/MhcVintar"
+            target="_blank"
             className="flex h-10 w-10 items-center justify-center rounded-full
             border border-blue-200 bg-blue-100
             transition hover:scale-110 hover:bg-blue-200"

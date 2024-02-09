@@ -7,6 +7,7 @@ import EducationAndExperienceCard from "./education-and-experience-card";
 import StartEndPattern from "@/components/education-and-experience/start-end-pattern";
 import Connector from "@/components/education-and-experience/connector";
 import IconContainer from "@/components/education-and-experience/icon-container";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 export default function EducationAndExperience() {
   const sectionRef = useSectionInView(
@@ -44,16 +45,21 @@ export default function EducationAndExperience() {
               <IconContainer icon={item.icon} />
             </div>
             <div
-              className="px-3 text-center font-medium"
+              className="flex items-center justify-center gap-x-2 px-3 font-medium"
               style={{
                 gridRowStart: index * 3 + 3,
                 gridColumnStart: index % 2 === 0 ? 5 : 3,
               }}
             >
-              {item.date.toLocaleDateString("en-US", {
-                month: "short",
-                year: "numeric",
-              })}
+              {item.dateBegin.getFullYear() === item.dateEnd.getFullYear() ? (
+                item.dateBegin.getFullYear()
+              ) : (
+                <>
+                  {item.dateBegin.getFullYear()}
+                  <FaLongArrowAltRight />
+                  {item.dateEnd.getFullYear()}
+                </>
+              )}
             </div>
             {index + 1 < educationAndExperience.length && (
               <div

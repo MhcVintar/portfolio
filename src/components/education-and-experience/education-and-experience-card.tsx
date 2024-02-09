@@ -26,6 +26,7 @@ export default function EducationAndExperienceCard({
       <span className="mt-auto flex gap-x-2">
         <a
           href={link}
+          target="_blank"
           className="rounded-full border border-amber-300 bg-amber-200 px-3 py-1 transition hover:scale-105 hover:bg-amber-300 hover:text-slate-950"
         >
           Visit webiste
@@ -33,6 +34,7 @@ export default function EducationAndExperienceCard({
         {jobReference && (
           <a
             href={jobReference}
+            target="_blank"
             download
             onPointerEnter={() => setIsDownloadHovered(true)}
             onPointerLeave={() => setIsDownloadHovered(false)}
