@@ -20,7 +20,7 @@ export default function EducationAndExperienceCard({
   const [isDownloadHovered, setIsDownloadHovered] = useState(false);
 
   return (
-    <section className="flex h-60 flex-col rounded-lg border border-blue-200 bg-blue-100 p-4 text-left">
+    <section className="flex h-60 w-96 flex-col rounded-lg border border-blue-200 bg-blue-100 p-4 text-left">
       <h3 className="mb-2 text-2xl font-semibold">{title}</h3>
       <p>{description}</p>
       <span className="mt-auto flex gap-x-2">

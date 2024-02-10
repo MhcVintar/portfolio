@@ -8,6 +8,7 @@ import StartEndPattern from "@/components/education-and-experience/start-end-pat
 import Connector from "@/components/education-and-experience/connector";
 import IconContainer from "@/components/education-and-experience/icon-container";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function EducationAndExperience() {
   const sectionRef = useSectionInView(
@@ -22,7 +23,12 @@ export default function EducationAndExperience() {
       className="mb-32 flex w-[55rem] scroll-mt-24 flex-col items-center text-center"
     >
       <SectionHeading>My experience & education</SectionHeading>
-      <ul className="grid items-center justify-center">
+      <motion.ul
+        className="grid items-center justify-center"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <li className="col-start-4 row-span-2">
           <StartEndPattern />
         </li>
@@ -45,7 +51,7 @@ export default function EducationAndExperience() {
               <IconContainer icon={item.icon} />
             </div>
             <div
-              className="flex items-center justify-center gap-x-2 px-3 font-medium"
+              className={`flex w-36 items-center ${index % 2 === 0 ? "justify-start" : "justify-end"} gap-x-2 px-3 font-medium`}
               style={{
                 gridRowStart: index * 3 + 3,
                 gridColumnStart: index % 2 === 0 ? 5 : 3,
@@ -77,7 +83,7 @@ export default function EducationAndExperience() {
         >
           <StartEndPattern />
         </li>
-      </ul>
+      </motion.ul>
     </section>
   );
 }
