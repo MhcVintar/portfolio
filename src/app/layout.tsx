@@ -17,9 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-[8000px] scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.className} flex flex-col items-center justify-center bg-blue-200 bg-circuit-board`}
+        className={`${inter.className} flex flex-col items-center bg-blue-200 bg-circuit-board`}
       >
         <ActiveSectionContextProvider>
           <Header />
