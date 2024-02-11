@@ -28,7 +28,7 @@ export default function Skills() {
         {skills.map((skill, index) => (
           <motion.li
             key={index}
-            className="rounded-lg border border-blue-200 bg-blue-100 px-4 py-2
+            className="rounded-xl border border-blue-200 bg-blue-100 px-4 py-2
             text-lg"
             initial={{ opacity: 0, y: 100 }}
           >

@@ -14,16 +14,21 @@ import { ImSpinner } from "react-icons/im";
 
 type ActionState = "Idle" | "Sending" | "Sent" | "Failed";
 
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 export default function Contact() {
   const sectionRef = useSectionInView("Contact", 0.5);
   const [actionState, setActionState] = useState<ActionState>("Idle");
 
-  function handleSubmit(formData: FormData) {
+  async function handleSubmit(formData: FormData) {
     setActionState("Sending");
     submitCallback(formData);
   }
 
   async function submitCallback(formData: FormData) {
+    await sleep(1000);
     const res = await sendEmail(formData);
     if (res.error) {
       setActionState("Failed");
@@ -58,24 +63,24 @@ export default function Contact() {
             placeholder="Your email"
             required
             maxLength={100}
-            className="h-10 w-full rounded-lg border border-blue-200 bg-blue-100 p-2"
+            className="h-10 w-full rounded-lg border border-blue-200 bg-blue-100 px-3 py-2 outline-none transition focus:scale-[1.01] focus:border-2 focus:border-blue-300"
           />
           <textarea
             placeholder="Your message"
             name="message"
             required
             maxLength={5000}
-            className="h-40 w-full rounded-lg border border-blue-200 bg-blue-100 p-2"
+            className="h-40 w-full rounded-lg border border-blue-200 bg-blue-100 px-3 py-2 outline-none transition focus:scale-[1.01] focus:border-2 focus:border-blue-300"
           />
           <button
             type="submit"
             className="group flex items-center justify-center gap-x-2 self-start rounded-full border
-            border-amber-400 bg-amber-300 px-4 py-2 font-medium transition hover:scale-105 hover:bg-amber-400"
+            border-amber-400 bg-amber-300 px-4 py-2 font-medium outline-none transition hover:scale-105 hover:bg-amber-400 focus:scale-105 focus:bg-amber-400"
           >
             {actionState === "Idle" && (
               <>
                 Send
-                <FaPaperPlane className="transition group-hover:-translate-y-1 group-hover:translate-x-1" />
+                <FaPaperPlane className="transition group-hover:-translate-y-1 group-hover:translate-x-1 group-focus:-translate-y-1 group-focus:translate-x-1" />
               </>
             )}
             {actionState === "Sending" && (

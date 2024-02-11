@@ -24,12 +24,12 @@ export default function ProjectCard({
     <motion.article
       ref={ref}
       style={{ scale: transformedProgress, opacity: transformedProgress }}
-      className="relative h-96 overflow-hidden rounded-lg
+      className="relative h-96 w-[45rem] overflow-hidden rounded-lg
       border border-blue-200 bg-blue-100"
     >
       <div
         className="flex h-full w-1/2 flex-col px-10 py-8 text-left
-        group-odd:ml-[28rem]"
+        group-odd:translate-x-[22rem]"
       >
         <h3 className="mb-2 text-2xl font-semibold capitalize">{title}</h3>
         <p>{description}</p>
@@ -38,7 +38,7 @@ export default function ProjectCard({
             <li
               key={index}
               className="rounded-full border border-amber-300 bg-amber-200
-              px-2.5 py-0.5"
+              px-3 py-0.5"
             >
               {tag}
             </li>
@@ -49,7 +49,7 @@ export default function ProjectCard({
         src={image}
         alt={title}
         quality={95}
-        className="absolute top-8 h-full w-[36rem] rounded-t-xl object-cover
+        className="absolute top-8 h-full w-[30rem] rounded-t-xl object-cover
         transition group-odd:-left-40 group-even:-right-40
         group-hover:-translate-y-5 group-hover:scale-105
         group-odd:group-hover:translate-x-4 group-odd:group-hover:rotate-6

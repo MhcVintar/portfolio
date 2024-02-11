@@ -15,7 +15,7 @@ export default function Projects() {
       className="mb-32 w-[55rem] scroll-mt-24 text-center"
     >
       <SectionHeading>My projects</SectionHeading>
-      <ul className="flex flex-col gap-y-10">
+      <ul className="flex flex-col items-center gap-y-10">
         {projects.map((project, index) => (
           <li key={index} className="group">
             <ProjectCard {...project} />

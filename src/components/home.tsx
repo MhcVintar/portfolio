@@ -1,6 +1,6 @@
 "use client";
 
-import picture from "@public/portrait.jpg";
+import portrait from "@public/portrait.jpg";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
@@ -23,11 +23,12 @@ export default function Home() {
     <section
       id="home"
       ref={sectionRef}
-      className="flex w-[55rem] scroll-mt-96 flex-col items-center text-center"
+      className="flex w-[55rem] scroll-mt-[1000px] flex-col items-center
+      text-center"
     >
       <div className="group relative transition hover:scale-110">
         <MotionImage
-          src={picture}
+          src={portrait}
           alt="Miha portrait"
           height="120"
           width="120"
@@ -76,10 +77,7 @@ export default function Home() {
             href="#contact"
             onPointerEnter={() => setIsEmailMeHovered(true)}
             onPointerLeave={() => setIsEmailMeHovered(false)}
-            className="flex h-10 w-48 cursor-pointer items-center
-            justify-center gap-x-2 rounded-full border border-amber-400
-            bg-amber-300 font-medium transition hover:scale-105
-            hover:bg-amber-400 hover:text-slate-950"
+            className="flex cursor-pointer items-center justify-center gap-x-2 rounded-full border border-amber-400 bg-amber-300 px-4 py-2 font-medium transition hover:scale-105 hover:bg-amber-400 hover:text-slate-950"
           >
             Send me an email{" "}
             {isEmailMeHovered ? <FaEnvelopeOpenText /> : <FaEnvelope />}
@@ -92,9 +90,7 @@ export default function Home() {
             download
             onPointerEnter={() => setIsDownloadCVHovered(true)}
             onPointerLeave={() => setIsDownloadCVHovered(false)}
-            className="flex h-10 w-40 items-center justify-center gap-x-2
-            rounded-full border border-blue-200 bg-blue-100
-            font-medium transition hover:scale-105 hover:bg-blue-200 hover:text-slate-950"
+            className="flex items-center justify-center gap-x-2 rounded-full border border-blue-200 bg-blue-100 px-4 py-2 font-medium transition hover:scale-105 hover:bg-blue-200 hover:text-slate-950"
           >
             Download CV
             {isDownloadCVHovered ? <HiDocumentArrowDown /> : <HiDocument />}
@@ -105,9 +101,7 @@ export default function Home() {
           <a
             href="https://linkedin.com"
             target="_blank"
-            className="flex h-10 w-10 items-center justify-center rounded-full
-            border border-blue-200 bg-blue-100 transition
-            hover:scale-110 hover:bg-blue-200"
+            className="flex items-center justify-center rounded-full border border-blue-200 bg-blue-100 px-2 py-2 transition hover:scale-110 hover:bg-blue-200"
           >
             <FaLinkedin className="text-2xl hover:text-slate-950" />
           </a>
@@ -116,9 +110,7 @@ export default function Home() {
           <a
             href="https://github.com/MhcVintar"
             target="_blank"
-            className="flex h-10 w-10 items-center justify-center rounded-full
-            border border-blue-200 bg-blue-100
-            transition hover:scale-110 hover:bg-blue-200"
+            className="flex items-center justify-center rounded-full border border-blue-200 bg-blue-100 px-2 py-2 transition hover:scale-110 hover:bg-blue-200"
           >
             <FaGithub className="text-2xl hover:text-slate-950" />
           </a>
