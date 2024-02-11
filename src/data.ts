@@ -89,6 +89,7 @@ export const educationAndExperience = [
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
       "cillum sint consectetur cupidatat.",
     link: "https://www.fri.uni-lj.si/en",
+    reference: undefined,
     icon: React.createElement(FaUniversity),
   },
   {
@@ -99,17 +100,18 @@ export const educationAndExperience = [
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
       "cillum sint consectetur cupidatat.",
     link: "https://www.isystemlabs.si/",
-    jobReference: "/references/iSystem-reference.pdf",
+    reference: "/references/iSystem-reference.pdf",
     icon: React.createElement(FaMicrochip),
   },
   {
     title: "Second year of University",
     dateBegin: new Date("2023-2-2"),
-    dateEnd: new Date("2023-2-2"),
+    dateEnd: "present",
     description:
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
       "cillum sint consectetur cupidatat.",
     link: "https://www.fri.uni-lj.si/en",
+    reference: undefined,
     icon: React.createElement(FaUniversity),
   },
 ] as const;

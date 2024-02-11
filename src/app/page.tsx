@@ -1,6 +1,5 @@
 import About from "@/components/about";
 import Contact from "@/components/contact";
-import EducationAndExperience from "@/components/education-and-experience/education-and-experience";
 import Timeline from "@/components/education-and-experience/timeline";
 import Home from "@/components/home";
 import Projects from "@/components/projects/projects";
