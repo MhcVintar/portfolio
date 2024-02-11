@@ -52,7 +52,12 @@ export default function Contact() {
         <p>
           Send me an email to{" "}
           <u>
-            <a href="mailto:mihavintar3@gmail.com">mihavintar3@gmail.com</a>
+            <a
+              href="mailto:mihavintar3@gmail.com"
+              className="outline-none focus:font-medium"
+            >
+              mihavintar3@gmail.com
+            </a>
           </u>{" "}
           or through this form:
         </p>
