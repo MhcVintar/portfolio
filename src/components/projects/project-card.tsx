@@ -24,7 +24,7 @@ export default function ProjectCard({
     <motion.article
       ref={ref}
       style={{ scale: transformedProgress, opacity: transformedProgress }}
-      className="relative h-96 w-[45rem] overflow-hidden rounded-lg
+      className="relative h-96 w-[45rem] overflow-hidden rounded-xl
       border border-blue-200 bg-blue-100"
     >
       <div

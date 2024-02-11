@@ -63,14 +63,14 @@ export default function Contact() {
             placeholder="Your email"
             required
             maxLength={100}
-            className="h-10 w-full rounded-lg border border-blue-200 bg-blue-100 px-3 py-2 outline-none transition focus:scale-[1.01] focus:border-2 focus:border-blue-300"
+            className="h-10 w-full rounded-xl border border-blue-200 bg-blue-100 px-3 py-2 outline-none transition focus:scale-[1.01] focus:border-2 focus:border-blue-300"
           />
           <textarea
             placeholder="Your message"
             name="message"
             required
             maxLength={5000}
-            className="h-40 w-full rounded-lg border border-blue-200 bg-blue-100 px-3 py-2 outline-none transition focus:scale-[1.01] focus:border-2 focus:border-blue-300"
+            className="h-40 w-full rounded-xl border border-blue-200 bg-blue-100 px-3 py-2 outline-none transition focus:scale-[1.01] focus:border-2 focus:border-blue-300"
           />
           <button
             type="submit"
