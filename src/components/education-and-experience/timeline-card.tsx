@@ -1,8 +1,7 @@
 import { educationAndExperience } from "@/data";
 import { motion, useAnimate, useInView } from "framer-motion";
 import { useEffect, useState } from "react";
-import { FaLink } from "react-icons/fa";
-import { HiDocument, HiDocumentArrowDown } from "react-icons/hi2";
+import { FaEye, FaLink } from "react-icons/fa";
 
 type TimelineCardProps = (typeof educationAndExperience)[number] & {
   parity: "odd" | "even";
@@ -15,7 +14,6 @@ export default function TimelineCard({
   reference,
   parity,
 }: TimelineCardProps) {
-  const [isDownalodHovered, setIsDownloadHovered] = useState(false);
   const [sectionRef, animate] = useAnimate();
   const isInView = useInView(sectionRef, { once: true, amount: 0.5 });
 
@@ -36,28 +34,22 @@ export default function TimelineCard({
       <div className="mt-auto flex gap-2">
         <a
           href={link}
+          target="_blank"
           className="flex items-center gap-x-2 rounded-full border border-amber-300 bg-amber-200 px-3 py-0.5
           outline-none transition hover:scale-105 hover:bg-amber-300 focus:scale-105 focus:bg-amber-300"
         >
-          Visit
+          Visit website
           <FaLink className="text-sm" />
         </a>
         {reference && (
           <a
             href={reference}
-            onPointerEnter={() => setIsDownloadHovered(true)}
-            onPointerLeave={() => setIsDownloadHovered(false)}
-            onFocus={() => setIsDownloadHovered(true)}
-            onBlur={() => setIsDownloadHovered(false)}
-            className="flex items-center gap-x-2 rounded-full border border-amber-300 bg-amber-200 px-3 py-0.5
+            target="_blank"
+            className="group/reference flex items-center gap-x-2 rounded-full border border-amber-300 bg-amber-200 px-3 py-0.5
             outline-none transition hover:scale-105 hover:bg-amber-300 focus:scale-105 focus:bg-amber-300"
           >
-            Download reference
-            {isDownalodHovered ? (
-              <HiDocumentArrowDown className="text-sm" />
-            ) : (
-              <HiDocument className="text-sm" />
-            )}
+            View reference
+            <FaEye className="transition group-hover/reference:scale-125" />
           </a>
         )}
       </div>
