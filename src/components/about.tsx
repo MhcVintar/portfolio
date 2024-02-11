@@ -18,17 +18,23 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p>
-        Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
-        enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
-        exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit
-        nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor
-        minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure
-        elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor
-        Lorem duis laboris cupidatat officia voluptate. Culpa proident
-        adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod.
-        Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
-        Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa
-        et culpa duis.
+        Greetings! I'm a <strong>21-year-old</strong> student currently pursuing
+        a <strong>Bachelor's degree in Computer Science and Informatics</strong>{" "}
+        at the <strong>University of Ljubljana</strong>, following a solid
+        academic journey at <strong>Gimnazija Franceta Prešerna</strong>.{" "}
+        <i>Sporting</i> has been a significant part of my life, with{" "}
+        <strong>13 years</strong> dedicated to{" "}
+        <strong>competitive swimming</strong>, including participation in
+        prestigious events like the <i>European Youth Olympic Festival</i> and
+        the <i>European Junior Championships</i>. These experiences instilled in
+        me <u>discipline</u>, <u>perseverance</u>, and the ability to{" "}
+        <u>thrive under pressure</u>. Beyond the pool, my passion lies in
+        exploring the vast realm of computer science, constantly seeking to{" "}
+        <strong>innovate, create</strong>, and <strong>learn new skills</strong>
+        . Outside of academia, I maintain a healthy lifestyle through activities
+        such as <strong>mountain biking</strong> and regular{" "}
+        <strong>gym sessions</strong>, fostering a well-rounded approach to
+        personal and professional growth.
       </p>
     </motion.section>
   );
