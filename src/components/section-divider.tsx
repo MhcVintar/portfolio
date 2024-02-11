@@ -6,72 +6,85 @@ export default function SectionDivider() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="75"
-      height="153.13"
-      className="my-24"
+      width="60"
+      height="150"
+      className="my-28"
     >
-      <motion.line
-        x1="15.62"
-        y1="2"
-        x2="15.62"
-        y2="123.88"
+      <motion.circle
+        cx={30}
+        cy={10}
+        r={8}
         stroke="#fcd34d"
-        strokeWidth="4"
-        strokeLinecap="round"
-        initial={{ opacity: 0, pathLength: 0 }}
-        animate={{ opacity: 1, pathLength: 1 }}
+        strokeWidth={4}
+        fill="#fde68a"
+        initial={{ pathLength: 0, fillOpacity: 0, rotate: 90 }}
+        animate={{ pathLength: 1.1, fillOpacity: 1, rotate: 90 }}
         transition={{ duration: 0.2 }}
       />
-      <motion.path
-        d="M 15.62 123.88 A 10 10 90 0 1 15.62 143.88"
+      <motion.line
+        x1={30}
+        y1={19}
+        x2={30}
+        y2={131}
         stroke="#fcd34d"
-        strokeWidth="4"
-        strokeLinecap="round"
-        fill="#fde68a"
-        initial={{ opacity: 0, pathLength: 0 }}
-        animate={{ opacity: 1, pathLength: 1 }}
-        transition={{ delay: 0.2, duration: 0.2 }}
+        strokeWidth={4}
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{ duration: 0.2, delay: 0.2 }}
       />
-      <motion.path
-        d="M 15.62 123.88 A 10 10 90 0 0 15.62 143.88"
+      <motion.circle
+        cx={30}
+        cy={140}
+        r={8}
         stroke="#fcd34d"
-        strokeWidth="4"
-        strokeLinecap="round"
+        strokeWidth={4}
         fill="#fde68a"
-        initial={{ opacity: 0, pathLength: 0 }}
-        animate={{ opacity: 1, pathLength: 1 }}
-        transition={{ delay: 0.2, duration: 0.2 }}
+        initial={{ pathLength: 0, fillOpacity: 0, rotate: -90 }}
+        animate={{ pathLength: 1.1, fillOpacity: 1, rotate: -90 }}
+        transition={{ duration: 0.2, delay: 0.4 }}
+      />
+      <motion.line
+        x1={30}
+        y1={90}
+        x2={15.66}
+        y2={104.34}
+        stroke="#fcd34d"
+        strokeWidth={4}
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{ duration: 0.2, delay: 0.34 }}
+      />
+      <motion.circle
+        cx={10}
+        cy={110}
+        r={8}
+        stroke="#fcd34d"
+        strokeWidth={4}
+        fill="#fde68a"
+        initial={{ pathLength: 0, fillOpacity: 0, rotate: -45 }}
+        animate={{ pathLength: 1.1, fillOpacity: 1, rotate: -45 }}
+        transition={{ duration: 0.2, delay: 0.4 }}
       />
       <motion.polyline
-        points="50.81 2 50.81 51.3 59.06 81.73 59.06 111.26"
+        points="30 50 50 75 50 110"
         stroke="#fcd34d"
-        strokeWidth="4"
-        strokeLinecap="round"
+        strokeWidth={4}
         strokeLinejoin="round"
-        fill="#fde68a"
-        initial={{ opacity: 0, pathLength: 0 }}
-        animate={{ opacity: 1, pathLength: 1 }}
-        transition={{ duration: 0.2 }}
+        fill="none"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1.1 }}
+        transition={{ duration: 0.2, delay: 0.27 }}
       />
-      <motion.path
-        d="M 59.06 111.26 A 10 10 90 0 1 59.06 131.26"
+      <motion.circle
+        cx={50}
+        cy={120}
+        r={8}
         stroke="#fcd34d"
-        strokeWidth="4"
-        strokeLinecap="round"
+        strokeWidth={4}
         fill="#fde68a"
-        initial={{ opacity: 0, pathLength: 0 }}
-        animate={{ opacity: 1, pathLength: 1 }}
-        transition={{ delay: 0.2, duration: 0.2 }}
-      />
-      <motion.path
-        d="M 59.06 111.26 A 10 10 90 0 0 59.06 131.26"
-        stroke="#fcd34d"
-        strokeWidth="4"
-        strokeLinecap="round"
-        fill="#fde68a"
-        initial={{ opacity: 0, pathLength: 0 }}
-        animate={{ opacity: 1, pathLength: 1 }}
-        transition={{ delay: 0.2, duration: 0.2 }}
+        initial={{ pathLength: 0, fillOpacity: 0, rotate: -90 }}
+        animate={{ pathLength: 1.1, fillOpacity: 1, rotate: -90 }}
+        transition={{ duration: 0.2, delay: 0.4 }}
       />
     </svg>
   );
