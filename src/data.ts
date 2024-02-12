@@ -2,6 +2,7 @@ import musifyImage from "@public/projects/musify.png";
 import dockerImage from "@public/projects/docker-compose.jpg";
 import kubernetesImage from "@public/projects/microk8s.png";
 import sudokuImage from "@public/projects/sudoku.png";
+import portfolioImage from "@public/projects/portfolio.png";
 import { FaUniversity } from "react-icons/fa";
 import { FaMicrochip } from "react-icons/fa6";
 import React from "react";
@@ -19,42 +20,44 @@ export const projects = [
   {
     title: "Musify",
     description:
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
-      "cillum sint consectetur cupidatat.",
+      "A web app for users to exchange music files with random people " +
+      "globally. They can easily upload, download, and share their favorite " +
+      "tracks, fostering a dynamic community of music lovers.",
     tags: ["React", "Express", "PostgreSQL", "MinIO", "Prisma", "JWT", "Git"],
     image: musifyImage,
   },
   {
     title: "Musify Docker deployment",
     description:
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
-      "cillum sint consectetur cupidatat.",
-    tags: ["Docker", "Docker Compose", "Nginx", "Git"],
+      "Automation of a web app deployment using Docker and Docker " +
+      "Compose with continuous integration using GitHub Actions.",
+    tags: ["Docker", "Docker Compose", "Nginx", "Git", "PostgreSQL", "MinIO"],
     image: dockerImage,
   },
   {
     title: "Musify Kubernetes deployment",
     description:
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
-      "cillum sint consectetur cupidatat.",
-    tags: ["Docker", "Kubernetes", "Nginx", "Git"],
+      "Automation of a web app deployment and updates using " +
+      "Kubernetes, with multiple server and web server instances and " +
+      "a load balancer.",
+    tags: ["Docker", "Kubernetes", "Nginx", "Git", "PostgreSQL", "MinIO"],
     image: kubernetesImage,
   },
   {
     title: "Sudoku Solver",
     description:
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
-      "cillum sint consectetur cupidatat.",
+      "A terminal-based C program utilizing recursive backtracking for " +
+      "solving Sudoku puzzles efficiently.",
     tags: ["C"],
     image: sudokuImage,
   },
   {
     title: "Portfolio",
     description:
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
-      "cillum sint consectetur cupidatat.",
-    tags: ["React", "Next.js", "Framer motion", "Tailwind"],
-    image: sudokuImage,
+      "A modern and responsive web app that showcases my frontend " +
+      "abilities and my other computer science accomplishments.",
+    tags: ["TypeScript", "React", "Next.js", "Framer Motion", "Tailwind"],
+    image: portfolioImage,
   },
 ] as const;
 
@@ -71,45 +74,47 @@ export const skills = [
   "TypeScript",
   "Node.js",
   "Express",
+  "JWT",
   "React",
   "Next.js",
   "PostgreSQL",
   "Prisma",
   "Git",
   "Docker",
+  "Nginx",
   "Kubernetes",
 ] as const;
 
 export const educationAndExperience = [
   {
     title: "First year of University",
-    dateBegin: new Date("2023-2-2"),
-    dateEnd: new Date("2024-2-2"),
+    dateBegin: new Date("2022-10-01"),
+    dateEnd: new Date("2023-06-26"),
     description:
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
-      "cillum sint consectetur cupidatat.",
+      "First year of the university study programme for Computer and " +
+      "Information Science at the University of Ljubljana.",
     link: "https://www.fri.uni-lj.si/en",
     reference: undefined,
     icon: React.createElement(FaUniversity),
   },
   {
     title: "iSystem internship",
-    dateBegin: new Date("2023-2-2"),
-    dateEnd: new Date("2023-2-2"),
+    dateBegin: new Date("2023-07-11"),
+    dateEnd: new Date("2023-09-15"),
     description:
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
-      "cillum sint consectetur cupidatat.",
+      "Working on an IDE for embedded systems written in C++ and on " +
+      "a testing application for the IDE written in Python and PyQt.",
     link: "https://www.isystemlabs.si/",
     reference: "/references/iSystem-reference.pdf",
     icon: React.createElement(FaMicrochip),
   },
   {
     title: "Second year of University",
-    dateBegin: new Date("2023-2-2"),
+    dateBegin: new Date("2023-10-01"),
     dateEnd: "present",
     description:
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint " +
-      "cillum sint consectetur cupidatat.",
+      "Second year of the university study programme for Computer and " +
+      "Information Science at the University of Ljubljana.",
     link: "https://www.fri.uni-lj.si/en",
     reference: undefined,
     icon: React.createElement(FaUniversity),
