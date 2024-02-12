@@ -23,8 +23,8 @@ export default function Home() {
     <section
       id="home"
       ref={sectionRef}
-      className="flex w-[55rem] scroll-mt-[1000px] flex-col items-center
-      text-center"
+      className="flex w-full scroll-mt-[1000px] flex-col items-center px-2 text-center sm:w-[37rem] sm:px-0 lg:w-[45rem] xl:w-[50rem]
+      2xl:w-[55rem]"
     >
       <div className="group relative transition hover:scale-110">
         <MotionImage
@@ -68,7 +68,7 @@ export default function Home() {
         and <i>Next.js</i>
       </motion.h1>
       <motion.ul
-        className="flex gap-x-2.5"
+        className="flex flex-col items-center gap-2.5 sm:flex-row"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
@@ -120,9 +120,9 @@ export default function Home() {
           <a
             href="https://github.com/MhcVintar"
             target="_blank"
-            className="flex items-center justify-center rounded-full border border-blue-200 bg-blue-100 px-2 py-2
-            outline-none transition hover:scale-110
-            hover:bg-blue-200 focus:scale-110 focus:bg-blue-200"
+            className="flex w-fit items-center justify-center rounded-full border border-blue-200 bg-blue-100 px-2 py-2 outline-none
+            transition hover:scale-110 hover:bg-blue-200
+            focus:scale-110 focus:bg-blue-200"
           >
             <FaGithub className="text-2xl hover:text-slate-950" />
           </a>

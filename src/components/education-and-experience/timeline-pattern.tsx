@@ -1,12 +1,16 @@
+import { motion } from "framer-motion";
+
 type TimelinePatternProps = { className?: string };
 
 export default function TimelinePattern({ className }: TimelinePatternProps) {
   return (
-    <svg
+    <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       height="53"
       width="40"
       className={className}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
     >
       <circle
         cx="10"
@@ -32,6 +36,6 @@ export default function TimelinePattern({ className }: TimelinePatternProps) {
         strokeWidth="4"
         stroke="#fcd34d"
       />
-    </svg>
+    </motion.svg>
   );
 }

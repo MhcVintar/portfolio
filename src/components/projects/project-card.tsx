@@ -16,7 +16,7 @@ export default function ProjectCard({
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.25 1"],
+    offset: ["0 1", "1.1 1"],
   });
   const transformedProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
@@ -24,15 +24,15 @@ export default function ProjectCard({
     <motion.article
       ref={ref}
       style={{ scale: transformedProgress, opacity: transformedProgress }}
-      className="relative h-96 w-[45rem] overflow-hidden rounded-xl
-      border border-blue-200 bg-blue-100"
+      className="relative h-fit w-full overflow-hidden rounded-xl border
+      border-blue-200 bg-blue-100 sm:h-96"
     >
       <div
-        className="flex h-full w-1/2 flex-col px-10 py-8 text-left
-        group-odd:translate-x-[22rem]"
+        className="flex h-3/5 w-full flex-col px-5 py-4 text-left sm:h-full sm:w-1/2
+        sm:group-odd:translate-x-[19rem] md:group-odd:translate-x-[21rem] lg:group-odd:translate-x-[22rem]"
       >
         <h3 className="mb-2 text-2xl font-semibold capitalize">{title}</h3>
-        <p>{description}</p>
+        <p className="mb-6">{description}</p>
         <ul className="mt-auto flex flex-wrap gap-2">
           {tags.map((tag, index) => (
             <li
@@ -49,11 +49,11 @@ export default function ProjectCard({
         src={image}
         alt={title}
         quality={95}
-        className="absolute top-8 h-full w-[30rem] rounded-t-xl object-cover
-        transition group-odd:-left-40 group-even:-right-40
-        group-hover:-translate-y-5 group-hover:scale-105
-        group-odd:group-hover:translate-x-4 group-odd:group-hover:rotate-6
-        group-even:group-hover:-translate-x-4 group-even:group-hover:-rotate-6"
+        className="h-1/3 w-11/12 rounded-tr-xl object-cover transition group-hover:scale-105 sm:absolute sm:top-8 sm:block sm:h-full sm:w-[27rem] sm:rounded-t-xl
+        sm:group-odd:-left-40 sm:group-even:-right-40 sm:group-hover:-translate-y-5
+        sm:group-odd:group-hover:translate-x-4
+        sm:group-odd:group-hover:rotate-6 sm:group-even:group-hover:-translate-x-4
+        sm:group-even:group-hover:-rotate-6 md:w-[30rem]"
       />
     </motion.article>
   );

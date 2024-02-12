@@ -23,7 +23,7 @@ export default function RootLayout({
         className={`${inter.className} flex justify-center bg-blue-200 bg-circuit-board`}
       >
         <ActiveSectionContextProvider>
-          <div className="mx-36 my-32 flex flex-col items-center rounded-2xl bg-white px-40 py-4">
+          <div className="flex w-full flex-col items-center bg-white pb-4 md:py-4 lg:my-16 lg:w-[initial] lg:rounded-2xl lg:px-16 xl:my-32 xl:px-20 2xl:my-40 2xl:px-40">
             <Header />
             {children}
             <Footer />
