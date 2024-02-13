@@ -91,7 +91,6 @@ export default function Home() {
           </Link>
         </li>
         <li>
-          {/* TODO: polish up the CV.pdf */}
           <a
             href="/CV.pdf"
             download
@@ -112,9 +111,8 @@ export default function Home() {
           </a>
         </li>
         <li>
-          {/* TODO: polish up linkedin profile, add the link to it */}
           <a
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/miha-vintar-029b4a289/"
             target="_blank"
             className="flex items-center justify-center rounded-full border
             border-blue-200 bg-blue-100 px-2 py-2 outline-none transition

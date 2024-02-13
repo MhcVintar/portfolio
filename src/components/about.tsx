@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   const sectionRef = useSectionInView("About", 1);
+  const age = new Date().getFullYear() - new Date("2003-12-04").getFullYear();
 
   return (
     <motion.section
@@ -19,7 +20,7 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-2.5">
-        Greetings! I&apos;m a <strong>21-year-old</strong> student currently
+        Greetings! I&apos;m a <strong>{age}-year-old</strong> student currently
         pursuing a{" "}
         <strong>
           Bachelor&apos;s degree in Computer Science and Informatics
