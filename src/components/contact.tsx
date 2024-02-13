@@ -4,7 +4,7 @@ import { sendEmail } from "@/actions";
 import SectionHeading from "@/components/section-heading";
 import { useSectionInView } from "@/hooks";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useOptimistic, useRef, useState } from "react";
 import {
   FaCheckCircle,
   FaExclamationCircle,
@@ -16,19 +16,26 @@ type ActionState = "Idle" | "Sending" | "Sent" | "Failed";
 
 export default function Contact() {
   const sectionRef = useSectionInView("Contact", 0.5);
+  const formRef = useRef<HTMLFormElement>(null);
   const [actionState, setActionState] = useState<ActionState>("Idle");
+  const [optActionState, setOptActionState] = useOptimistic(actionState);
 
   async function handleSubmit(formData: FormData) {
-    setActionState("Sending");
-    submitCallback(formData);
-  }
-
-  async function submitCallback(formData: FormData) {
-    const res = await sendEmail(formData);
-    if (res?.success) {
-      setActionState("Sent");
-    } else {
+    setOptActionState("Sending");
+    try {
+      const res = await sendEmail(formData);
+      if (res?.success) {
+        setActionState("Sent");
+      } else {
+        setActionState("Failed");
+      }
+    } catch (error: any) {
       setActionState("Failed");
+    } finally {
+      setTimeout(() => {
+        formRef?.current?.reset();
+        setActionState("Idle");
+      }, 5000);
     }
   }
 
@@ -56,7 +63,11 @@ export default function Contact() {
           </u>{" "}
           or through this form:
         </p>
-        <form action={handleSubmit} className="my-3 flex flex-col gap-y-3">
+        <form
+          ref={formRef}
+          action={handleSubmit}
+          className="my-3 flex flex-col gap-y-3"
+        >
           <input
             type="email"
             name="replyTo"
@@ -80,13 +91,14 @@ export default function Contact() {
           />
           <button
             type="submit"
+            disabled={optActionState === "Sending"}
             className="group flex items-center justify-center gap-x-2
             self-center rounded-full border border-amber-400 bg-amber-300 px-4
             py-2 font-medium outline-none transition hover:scale-105
             hover:bg-amber-400 hover:text-slate-950 focus:scale-105
             focus:bg-amber-400 dark:text-slate-900 md:self-start"
           >
-            {actionState === "Idle" && (
+            {optActionState === "Idle" && (
               <>
                 Send
                 <FaPaperPlane
@@ -96,17 +108,17 @@ export default function Contact() {
                 />
               </>
             )}
-            {actionState === "Sending" && (
+            {optActionState === "Sending" && (
               <>
                 Sending <ImSpinner className="animate-spin" />
               </>
             )}
-            {actionState === "Sent" && (
+            {optActionState === "Sent" && (
               <>
                 Sent <FaCheckCircle />
               </>
             )}
-            {actionState === "Failed" && (
+            {optActionState === "Failed" && (
               <>
                 Failed <FaExclamationCircle />
               </>

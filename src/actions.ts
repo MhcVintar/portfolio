@@ -23,7 +23,6 @@ export async function sendEmail(formData: FormData) {
       subject: "Message from portfolio",
       text: message,
     });
-
     return { success: "Message sent" };
   } catch (error: any) {
     console.log(error);
