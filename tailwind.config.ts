@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "circuit-board": "url(../../public/circuit-board.svg)",
+        "circuit-board-dark": "url(../../public/circuit-board-dark.svg)",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
@@ -17,5 +18,6 @@ const config: Config = {
     },
   },
   plugins: [],
+  darkMode: "class",
 };
 export default config;
