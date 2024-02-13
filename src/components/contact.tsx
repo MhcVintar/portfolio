@@ -68,27 +68,37 @@ export default function Contact() {
             placeholder="Your email"
             required
             maxLength={100}
-            className="h-10 w-full rounded-xl border border-blue-200 bg-blue-100 px-3 py-2 outline-none
-            transition focus:outline-blue-300 dark:border-gray-700 dark:bg-gray-800 dark:focus:outline-gray-600"
+            className="h-10 w-full rounded-xl border border-blue-200
+            bg-blue-100 px-3 py-2 outline-none transition
+            focus:outline-blue-300 dark:border-gray-700 dark:bg-gray-800
+            dark:focus:outline-gray-600"
           />
           <textarea
             placeholder="Your message"
             name="message"
             required
             maxLength={5000}
-            className="h-40 w-full rounded-xl border border-blue-200 bg-blue-100 px-3 py-2 outline-none transition focus:outline-blue-300
-            dark:border-gray-700 dark:bg-gray-800 dark:focus:outline-gray-600"
+            className="h-40 w-full rounded-xl border border-blue-200
+            bg-blue-100 px-3 py-2 outline-none transition
+            focus:outline-blue-300 dark:border-gray-700 dark:bg-gray-800
+            dark:focus:outline-gray-600"
           />
           <button
             type="submit"
-            className="group flex items-center justify-center gap-x-2 self-center rounded-full border border-amber-400 bg-amber-300 px-4
-            py-2 font-medium outline-none transition hover:scale-105 hover:bg-amber-400 hover:text-slate-950 focus:scale-105 focus:bg-amber-400
-            dark:text-slate-900 md:self-start"
+            className="group flex items-center justify-center gap-x-2
+            self-center rounded-full border border-amber-400 bg-amber-300 px-4
+            py-2 font-medium outline-none transition hover:scale-105
+            hover:bg-amber-400 hover:text-slate-950 focus:scale-105
+            focus:bg-amber-400 dark:text-slate-900 md:self-start"
           >
             {actionState === "Idle" && (
               <>
                 Send
-                <FaPaperPlane className="transition group-hover:-translate-y-1 group-hover:translate-x-1 group-focus:-translate-y-1 group-focus:translate-x-1" />
+                <FaPaperPlane
+                  className="transition group-hover:-translate-y-1
+                  group-hover:translate-x-1 group-focus:-translate-y-1
+                  group-focus:translate-x-1"
+                />
               </>
             )}
             {actionState === "Sending" && (

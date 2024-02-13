@@ -11,7 +11,8 @@ export default function About() {
     <motion.section
       id="about"
       ref={sectionRef}
-      className="mb-32 w-full scroll-mt-24 px-2 text-center sm:w-[35rem] sm:px-0 md:w-[40rem] lg:w-[45rem] xl:w-[50rem] 2xl:w-[55rem]"
+      className="mb-32 w-full scroll-mt-24 px-2 text-center sm:w-[35rem]
+      sm:px-0 md:w-[40rem] lg:w-[45rem] xl:w-[50rem] 2xl:w-[55rem]"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}

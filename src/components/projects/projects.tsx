@@ -12,7 +12,8 @@ export default function Projects() {
     <section
       id="projects"
       ref={sectionRef}
-      className="mb-32 w-full scroll-mt-24 px-2 text-center sm:w-[37rem] sm:px-0 md:w-[42rem] lg:w-[45rem]"
+      className="mb-32 w-full scroll-mt-24 px-2 text-center sm:w-[37rem]
+      sm:px-0 md:w-[42rem] lg:w-[45rem]"
     >
       <SectionHeading>My projects</SectionHeading>
       <ul className="flex flex-col items-center gap-y-10">

@@ -1,6 +1,6 @@
 import { educationAndExperience } from "@/data";
 import { motion, useAnimate, useInView } from "framer-motion";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 type TimelineIconProps = {
   icon: (typeof educationAndExperience)[number]["icon"];
@@ -15,7 +15,7 @@ export default function TimelineIcon({ icon, className }: TimelineIconProps) {
     if (inView) {
       animate(divRef.current, { opacity: 1, scale: 1, x: "-50%" });
     }
-  }, [inView]);
+  }, [inView, animate, divRef]);
 
   return (
     <motion.div

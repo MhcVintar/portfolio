@@ -14,6 +14,6 @@ export function useSectionInView(section: SectionType, amount: number) {
     if (isInView) {
       setActiveSection(section);
     }
-  }, [isInView]);
+  }, [isInView, setActiveSection, section]);
   return ref;
 }

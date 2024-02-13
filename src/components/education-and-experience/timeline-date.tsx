@@ -21,7 +21,7 @@ export default function TimelineDate({
     if (inView) {
       animate(spanRef.current, { opacity: 1 }, { duration: 0.5 });
     }
-  }, [inView]);
+  }, [inView, animate, spanRef]);
 
   return (
     <motion.span
