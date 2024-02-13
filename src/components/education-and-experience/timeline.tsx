@@ -19,8 +19,8 @@ export default function Timeline() {
     <section
       id="education-and-experience"
       ref={sectionRef}
-      className="mb-32 scroll-mt-24 text-center sm:w-[35rem] md:w-[45rem]
-      lg:w-[50rem] xl:w-[55rem]"
+      className="mb-32 scroll-mt-24 overflow-hidden text-center sm:w-[35rem]
+      md:w-[45rem] lg:w-[50rem] xl:w-[55rem]"
     >
       <SectionHeading>Education & Experience</SectionHeading>
       <div className="relative">
