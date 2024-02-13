@@ -25,8 +25,8 @@ export default function ThemeSwitcher() {
     const localTheme = window.localStorage.getItem("theme") as Theme | null;
     if (localTheme) {
       setTheme(localTheme);
-      if (localTheme === "light") {
-        document.documentElement.classList.remove("dark");
+      if (localTheme === "dark") {
+        document.documentElement.classList.add("dark");
       }
     } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme("dark");
