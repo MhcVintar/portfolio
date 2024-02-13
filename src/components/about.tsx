@@ -18,8 +18,11 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-2.5">
-        Greetings! I'm a <strong>21-year-old</strong> student currently pursuing
-        a <strong>Bachelor's degree in Computer Science and Informatics</strong>{" "}
+        Greetings! I&apos;m a <strong>21-year-old</strong> student currently
+        pursuing a{" "}
+        <strong>
+          Bachelor&apos;s degree in Computer Science and Informatics
+        </strong>{" "}
         at the <strong>University of Ljubljana</strong>, following a solid
         academic journey at <strong>Gimnazija Franceta Prešerna</strong>.{" "}
         <i>Sporting</i> has been a significant part of my life, with{" "}

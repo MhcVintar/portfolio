@@ -63,7 +63,8 @@ export default function Home() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <b>Hello, my name is Miha.</b> I'm a <b>computer science student </b>
+        <b>Hello, my name is Miha.</b> I&apos;m a{" "}
+        <b>computer science student </b>
         and I love building web applications, especially with <i>React </i>
         and <i>Next.js</i>
       </motion.h1>
