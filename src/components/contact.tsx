@@ -68,19 +68,22 @@ export default function Contact() {
             placeholder="Your email"
             required
             maxLength={100}
-            className="h-10 w-full rounded-xl border border-blue-200 bg-blue-100 px-3 py-2 outline-none transition focus:border-2 focus:border-blue-300 sm:focus:scale-y-[1.07] md:focus:scale-[1.01]"
+            className="h-10 w-full rounded-xl border border-blue-200 bg-blue-100 px-3 py-2 outline-none
+            transition focus:outline-blue-300 dark:border-gray-700 dark:bg-gray-800 dark:focus:outline-gray-600"
           />
           <textarea
             placeholder="Your message"
             name="message"
             required
             maxLength={5000}
-            className="h-40 w-full rounded-xl border border-blue-200 bg-blue-100 px-3 py-2 outline-none transition focus:border-2 focus:border-blue-300 sm:focus:scale-y-105 md:focus:scale-[1.01]"
+            className="h-40 w-full rounded-xl border border-blue-200 bg-blue-100 px-3 py-2 outline-none transition focus:outline-blue-300
+            dark:border-gray-700 dark:bg-gray-800 dark:focus:outline-gray-600"
           />
           <button
             type="submit"
             className="group flex items-center justify-center gap-x-2 self-center rounded-full border border-amber-400 bg-amber-300 px-4
-            py-2 font-medium outline-none transition hover:scale-105 hover:bg-amber-400 focus:scale-105 focus:bg-amber-400 md:self-start"
+            py-2 font-medium outline-none transition hover:scale-105 hover:bg-amber-400 hover:text-slate-950 focus:scale-105 focus:bg-amber-400
+            dark:text-slate-900 md:self-start"
           >
             {actionState === "Idle" && (
               <>

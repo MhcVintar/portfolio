@@ -25,7 +25,7 @@ export default function ProjectCard({
       ref={ref}
       style={{ scale: transformedProgress, opacity: transformedProgress }}
       className="relative h-fit w-full overflow-hidden rounded-xl border
-      border-blue-200 bg-blue-100 sm:h-96"
+      border-blue-200 bg-blue-100 dark:border-gray-700 dark:bg-gray-800 sm:h-96"
     >
       <div
         className="flex h-3/5 w-full flex-col px-5 py-4 text-left sm:h-full sm:w-1/2
@@ -37,8 +37,8 @@ export default function ProjectCard({
           {tags.map((tag, index) => (
             <li
               key={index}
-              className="rounded-full border border-amber-300 bg-amber-200
-              px-3 py-0.5"
+              className="rounded-full border border-amber-300 bg-amber-200 px-3
+              py-0.5 text-slate-900"
             >
               {tag}
             </li>

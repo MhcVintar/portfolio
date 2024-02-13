@@ -20,7 +20,7 @@ export default function TimelineIcon({ icon, className }: TimelineIconProps) {
   return (
     <motion.div
       ref={divRef}
-      className={`h-fit w-fit rounded-full border-4 border-amber-300 bg-amber-200 p-2 text-3xl ${className}`}
+      className={`h-fit w-fit rounded-full border-4 border-amber-300 bg-amber-200 p-2 text-3xl text-slate-900 ${className}`}
       initial={{ opacity: 0, scale: 0, x: "-50%" }}
     >
       {icon}

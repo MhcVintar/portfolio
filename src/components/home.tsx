@@ -33,7 +33,7 @@ export default function Home() {
           height="120"
           width="120"
           quality={95}
-          className="rounded-full border-4 border-blue-200"
+          className="rounded-full border-4 border-blue-200 dark:border-gray-700"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -82,7 +82,7 @@ export default function Home() {
             onBlur={() => setIsEmailMeHovered(false)}
             className="flex cursor-pointer items-center justify-center gap-x-2 rounded-full border border-amber-400 bg-amber-300 px-4 py-2 font-medium
             outline-none transition hover:scale-105 hover:bg-amber-400
-            hover:text-slate-950 focus:scale-105 focus:bg-amber-400 focus:text-slate-950"
+            hover:text-slate-950 focus:scale-105 focus:bg-amber-400 focus:text-slate-950 dark:text-slate-900"
           >
             Send me an email
             {isEmailMeHovered ? <FaEnvelopeOpenText /> : <FaEnvelope />}
@@ -99,7 +99,8 @@ export default function Home() {
             onBlur={() => setIsDownloadCVHovered(false)}
             className="flex items-center justify-center gap-x-2 rounded-full border border-blue-200 bg-blue-100 px-4 py-2 font-medium
             outline-none transition hover:scale-105 hover:bg-blue-200
-            hover:text-slate-950 focus:scale-105 focus:bg-blue-200 focus:text-slate-950"
+            hover:text-slate-950 focus:scale-105 focus:bg-blue-200 focus:text-slate-950 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700
+            dark:hover:text-gray-100 dark:focus:bg-gray-700 dark:focus:text-gray-100"
           >
             Download CV
             {isDownloadCVHovered ? <HiDocumentArrowDown /> : <HiDocument />}
@@ -112,20 +113,22 @@ export default function Home() {
             target="_blank"
             className="flex items-center justify-center rounded-full border border-blue-200 bg-blue-100 px-2 py-2
             outline-none transition hover:scale-110
-            hover:bg-blue-200 focus:scale-110 focus:bg-blue-200"
+            hover:bg-blue-200 hover:text-slate-950 focus:scale-110 focus:bg-blue-200 dark:border-gray-700 dark:bg-gray-800
+            dark:hover:bg-gray-700 dark:hover:text-gray-100 dark:focus:bg-gray-700 dark:focus:text-gray-100"
           >
-            <FaLinkedin className="text-2xl hover:text-slate-950" />
+            <FaLinkedin className="text-2xl" />
           </a>
         </li>
         <li>
           <a
             href="https://github.com/MhcVintar"
             target="_blank"
-            className="flex w-fit items-center justify-center rounded-full border border-blue-200 bg-blue-100 px-2 py-2 outline-none
-            transition hover:scale-110 hover:bg-blue-200
-            focus:scale-110 focus:bg-blue-200"
+            className="flex items-center justify-center rounded-full border border-blue-200 bg-blue-100 px-2 py-2
+            outline-none transition hover:scale-110
+            hover:bg-blue-200 hover:text-slate-950 focus:scale-110 focus:bg-blue-200 dark:border-gray-700 dark:bg-gray-800
+            dark:hover:bg-gray-700 dark:hover:text-gray-100 dark:focus:bg-gray-700 dark:focus:text-gray-100"
           >
-            <FaGithub className="text-2xl hover:text-slate-950" />
+            <FaGithub className="text-2xl" />
           </a>
         </li>
       </motion.ul>
