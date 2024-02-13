@@ -26,6 +26,7 @@ export async function sendEmail(formData: FormData) {
 
     return { success: "Message sent" };
   } catch (error: any) {
+    console.log(error);
     return { error: error?.message ? error.message : "Unknown error occurred" };
   }
 }

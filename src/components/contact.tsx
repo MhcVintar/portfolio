@@ -30,10 +30,10 @@ export default function Contact() {
   async function submitCallback(formData: FormData) {
     await sleep(1000);
     const res = await sendEmail(formData);
-    if (res.error) {
-      setActionState("Failed");
-    } else {
+    if (res?.success) {
       setActionState("Sent");
+    } else {
+      setActionState("Failed");
     }
   }
 
