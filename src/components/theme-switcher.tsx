@@ -27,11 +27,10 @@ export default function ThemeSwitcher() {
       setTheme(localTheme);
       if (localTheme === "light") {
         document.documentElement.classList.remove("dark");
-      } else {
-        document.documentElement.classList.add("dark");
       }
     } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme("dark");
+      document.documentElement.classList.add("dark");
     }
   }, []);
 
