@@ -14,10 +14,6 @@ import { ImSpinner } from "react-icons/im";
 
 type ActionState = "Idle" | "Sending" | "Sent" | "Failed";
 
-function sleep(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 export default function Contact() {
   const sectionRef = useSectionInView("Contact", 0.5);
   const [actionState, setActionState] = useState<ActionState>("Idle");
@@ -28,7 +24,6 @@ export default function Contact() {
   }
 
   async function submitCallback(formData: FormData) {
-    await sleep(1000);
     const res = await sendEmail(formData);
     if (res?.success) {
       setActionState("Sent");
