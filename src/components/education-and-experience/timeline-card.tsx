@@ -1,11 +1,24 @@
+"use client";
+
 import { educationAndExperience } from "@/data";
 import { motion, useAnimate, useInView } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { FaEye, FaLink } from "react-icons/fa";
 
 type TimelineCardProps = (typeof educationAndExperience)[number] & {
   parity: "odd" | "even";
 };
+
+function subscribe(callback: () => void) {
+  window.addEventListener("resize", callback);
+  return () => {
+    window.removeEventListener("resize", callback);
+  };
+}
+
+function getSnapshot() {
+  return window.innerWidth;
+}
 
 export default function TimelineCard({
   title,
@@ -16,6 +29,7 @@ export default function TimelineCard({
 }: TimelineCardProps) {
   const [sectionRef, animate] = useAnimate();
   const isInView = useInView(sectionRef, { once: true, amount: 0.33 });
+  const viewportWidth = useSyncExternalStore(subscribe, getSnapshot);
 
   useEffect(() => {
     if (isInView) {
@@ -30,7 +44,10 @@ export default function TimelineCard({
       border-blue-200 bg-blue-100 px-4 py-2 text-left dark:border-gray-700
       dark:bg-gray-800 sm:mr-0 sm:h-60 sm:w-[29rem] md:h-72 md:w-[20rem]
       lg:h-64 lg:w-[22rem] xl:w-96"
-      initial={{ opacity: 0, x: parity === "odd" ? -100 : 100 }}
+      initial={{
+        opacity: 0,
+        x: parity === "odd" && viewportWidth >= 768 ? -100 : 100,
+      }}
     >
       <h3 className="mb-2 text-2xl font-semibold">{title}</h3>
       <p className="mb-5 sm:mb-0">{description}</p>

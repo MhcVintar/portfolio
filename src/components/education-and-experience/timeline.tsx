@@ -8,6 +8,7 @@ import TimelineIcon from "./timeline-icon";
 import TimelinePattern from "./timeline-pattern";
 import TimelineDate from "./timeline-date";
 import { motion } from "framer-motion";
+import ClientRunWrapper from "../client-run-wrapper";
 
 export default function Timeline() {
   const sectionRef = useSectionInView(
@@ -36,10 +37,12 @@ export default function Timeline() {
               sm:flex-row sm:items-center sm:justify-end md:odd:justify-start
               md:even:justify-end"
             >
-              <TimelineCard
-                {...item}
-                parity={index % 2 === 1 ? "odd" : "even"}
-              />
+              <ClientRunWrapper>
+                <TimelineCard
+                  {...item}
+                  parity={index % 2 === 0 ? "odd" : "even"}
+                />
+              </ClientRunWrapper>
               <TimelineIcon
                 icon={item.icon}
                 className="absolute left-[32px] z-10 md:left-1/2"
