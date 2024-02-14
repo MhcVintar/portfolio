@@ -16,10 +16,11 @@ export default function Header() {
     >
       <nav>
         <ul
-          className="flex flex-wrap items-center justify-center border-b-[1px]
-          border-blue-200 border-opacity-50 bg-blue-100 bg-opacity-90 px-3 py-4
-          text-lg shadow-xl dark:border-gray-700 dark:bg-gray-800
-          dark:bg-opacity-90 md:flex-nowrap md:rounded-full md:border"
+          className="flex flex-wrap items-center justify-center gap-y-2
+          border-b-[1px] border-blue-200 border-opacity-50 bg-blue-100
+          bg-opacity-90 px-3 py-4 text-lg shadow-xl dark:border-gray-700
+          dark:bg-gray-800 dark:bg-opacity-90 md:flex-nowrap md:rounded-full
+          md:border"
         >
           {links.map((link, index) => (
             <li key={index}>

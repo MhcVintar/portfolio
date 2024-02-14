@@ -13,7 +13,7 @@ import {
 export type SectionType = (typeof links)[number]["name"];
 type ActiveSectionContextType = {
   activeSection: SectionType;
-  setActiveSection: Dispatch<SetStateAction<SectionType>>;
+  setActiveSection: (value: SectionType) => void;
 };
 type ActiveSectionProviderProps = { children: ReactNode };
 
@@ -25,9 +25,19 @@ export default function ActiveSectionContextProvider({
   children,
 }: ActiveSectionProviderProps) {
   const [activeSection, setActiveSection] = useState<SectionType>("Home");
+  const [lastChange, setLastChange] = useState(Date.now());
+
+  const throttledSetActiveState = (value: SectionType) => {
+    if (Date.now() - lastChange > 1000) {
+      setActiveSection(value);
+      setLastChange(Date.now());
+    }
+  };
 
   return (
-    <ActiveSectionContext.Provider value={{ activeSection, setActiveSection }}>
+    <ActiveSectionContext.Provider
+      value={{ activeSection, setActiveSection: throttledSetActiveState }}
+    >
       {children}
     </ActiveSectionContext.Provider>
   );

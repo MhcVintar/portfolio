@@ -15,7 +15,7 @@ export default function TimelineCard({
   parity,
 }: TimelineCardProps) {
   const [sectionRef, animate] = useAnimate();
-  const isInView = useInView(sectionRef, { once: true, amount: 0.5 });
+  const isInView = useInView(sectionRef, { once: true, amount: 0.33 });
 
   useEffect(() => {
     if (isInView) {
