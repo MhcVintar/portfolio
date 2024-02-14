@@ -19,11 +19,11 @@ export default function Timeline() {
     <section
       id="education-and-experience"
       ref={sectionRef}
-      className="mb-32 scroll-mt-24 overflow-hidden text-center sm:w-[35rem]
-      md:w-[45rem] lg:w-[50rem] xl:w-[55rem]"
+      className="mb-32 scroll-mt-24 text-center sm:w-[35rem] md:w-[45rem]
+      lg:w-[50rem] xl:w-[55rem]"
     >
       <SectionHeading>Education & Experience</SectionHeading>
-      <div className="relative">
+      <div className="relative overflow-hidden">
         <TimelinePattern
           className="absolute left-[22px] top-0 z-10 md:left-1/2
           md:-translate-x-[10px]"

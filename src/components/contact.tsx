@@ -12,29 +12,26 @@ import {
 } from "react-icons/fa";
 import { ImSpinner } from "react-icons/im";
 
-type ActionState = "Idle" | "Sending" | "Sent" | "Failed";
+type ActionState = "idle" | "pending" | "success" | "error";
 
 export default function Contact() {
   const sectionRef = useSectionInView("Contact", 0.5);
   const formRef = useRef<HTMLFormElement>(null);
-  const [actionState, setActionState] = useState<ActionState>("Idle");
+  const [actionState, setActionState] = useState<ActionState>("idle");
   const [optActionState, setOptActionState] = useOptimistic(actionState);
 
   async function handleSubmit(formData: FormData) {
-    setOptActionState("Sending");
-    try {
+    if (optActionState === "idle") {
+      setOptActionState("pending");
       const res = await sendEmail(formData);
       if (res?.success) {
-        setActionState("Sent");
+        setActionState("success");
       } else {
-        setActionState("Failed");
+        setActionState("error");
       }
-    } catch (error: any) {
-      setActionState("Failed");
-    } finally {
       setTimeout(() => {
-        formRef?.current?.reset();
-        setActionState("Idle");
+        formRef.current?.reset();
+        setActionState("idle");
       }, 5000);
     }
   }
@@ -91,14 +88,14 @@ export default function Contact() {
           />
           <button
             type="submit"
-            disabled={optActionState === "Sending"}
+            disabled={optActionState !== "idle"}
             className="group flex items-center justify-center gap-x-2
             self-center rounded-full border border-amber-400 bg-amber-300 px-4
             py-2 font-medium outline-none transition hover:scale-105
             hover:bg-amber-400 hover:text-slate-950 focus:scale-105
             focus:bg-amber-400 dark:text-slate-900 md:self-start"
           >
-            {optActionState === "Idle" && (
+            {optActionState === "idle" && (
               <>
                 Send
                 <FaPaperPlane
@@ -108,17 +105,17 @@ export default function Contact() {
                 />
               </>
             )}
-            {optActionState === "Sending" && (
+            {optActionState === "pending" && (
               <>
                 Sending <ImSpinner className="animate-spin" />
               </>
             )}
-            {optActionState === "Sent" && (
+            {optActionState === "success" && (
               <>
                 Sent <FaCheckCircle />
               </>
             )}
-            {optActionState === "Failed" && (
+            {optActionState === "error" && (
               <>
                 Failed <FaExclamationCircle />
               </>
@@ -129,3 +126,5 @@ export default function Contact() {
     </section>
   );
 }
+
+function Sumbit() {}

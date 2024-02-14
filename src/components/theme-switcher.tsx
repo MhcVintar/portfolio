@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { LuMoon, LuSun, LuSunMedium } from "react-icons/lu";
 
 type Theme = "light" | "dark";
@@ -21,10 +21,12 @@ export default function ThemeSwitcher() {
     }
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const localTheme = window.localStorage.getItem("theme") as Theme | null;
+
     if (localTheme) {
       setTheme(localTheme);
+
       if (localTheme === "dark") {
         document.documentElement.classList.add("dark");
       }
