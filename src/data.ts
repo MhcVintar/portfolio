@@ -64,6 +64,7 @@ export const projects = [
 export const skills = [
   "Python",
   "Java",
+  "Spring",
   "C",
   "C++",
   "HTML",
@@ -74,7 +75,6 @@ export const skills = [
   "TypeScript",
   "Node.js",
   "Express",
-  "JWT",
   "React",
   "Next.js",
   "PostgreSQL",
