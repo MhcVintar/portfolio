@@ -3,6 +3,7 @@ import dockerImage from "@public/projects/docker-compose.jpg";
 import kubernetesImage from "@public/projects/microk8s.png";
 import sudokuImage from "@public/projects/sudoku.png";
 import portfolioImage from "@public/projects/portfolio.png";
+import holeroImage from "@public/projects/holero.png";
 import { FaUniversity } from "react-icons/fa";
 import { FaMicrochip } from "react-icons/fa6";
 import React from "react";
@@ -59,6 +60,26 @@ export const projects = [
     tags: ["TypeScript", "React", "Next.js", "Framer Motion", "Tailwind"],
     image: portfolioImage,
   },
+  {
+    title: "Holero",
+    description:
+      "A social media website that targets car enthusiasts by making it easy " +
+      "to find car meets and car-related events in your area.",
+    tags: [
+      "Java",
+      "Spring",
+      "Neo4j",
+      "MinIO",
+      "ReactNative",
+      "Expo",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind",
+      "Docker",
+    ],
+    image: holeroImage,
+  },
 ] as const;
 
 export const skills = [
@@ -79,6 +100,8 @@ export const skills = [
   "Next.js",
   "PostgreSQL",
   "Prisma",
+  "Neo4j",
+  "MinIO",
   "Git",
   "Docker",
   "Nginx",
