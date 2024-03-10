@@ -65,8 +65,8 @@ export default function Home() {
       >
         <b>Hello, my name is Miha.</b> I&apos;m a{" "}
         <b>computer science student </b>
-        and I love building web applications, especially with <i>React </i>
-        and <i>Next.js</i>
+        and I love building web applications, especially with <i>React</i>,{" "}
+        <i>Next.js</i> and <i>Spring</i>
       </motion.h1>
       <motion.ul
         className="flex flex-wrap items-center justify-center gap-2.5"
