@@ -5,7 +5,7 @@ import sudokuImage from "@public/projects/sudoku.png";
 import portfolioImage from "@public/projects/portfolio.png";
 import holeroImage from "@public/projects/holero.png";
 import { FaUniversity } from "react-icons/fa";
-import { FaMicrochip } from "react-icons/fa6";
+import { FaMicrochip, FaServer } from "react-icons/fa6";
 import React from "react";
 
 export const links = [
@@ -142,5 +142,14 @@ export const educationAndExperience = [
     link: "https://www.fri.uni-lj.si/en",
     reference: undefined,
     icon: React.createElement(FaUniversity),
+  },
+  {
+    title: "DevRev internship",
+    dateBegin: new Date("2024-05-06"),
+    dateEnd: "present",
+    description: "Working on the backend of DevRev's marketplace",
+    link: "https://devrev.ai/",
+    reference: undefined,
+    icon: React.createElement(FaServer),
   },
 ] as const;
