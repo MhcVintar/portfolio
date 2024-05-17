@@ -86,6 +86,7 @@ export const skills = [
   "Python",
   "Java",
   "Spring",
+  "Go",
   "C",
   "C++",
   "HTML",
