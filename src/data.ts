@@ -147,7 +147,7 @@ export const educationAndExperience = [
     title: "DevRev internship",
     dateBegin: new Date("2024-05-06"),
     dateEnd: "present",
-    description: "Working on the backend of DevRev's marketplace",
+    description: "Working on the backend of DevRev's marketplace using Go",
     link: "https://devrev.ai/",
     reference: undefined,
     icon: React.createElement(FaServer),

@@ -1,6 +1,5 @@
 import { educationAndExperience } from "@/data";
-import { motion, useAnimate, useInView } from "framer-motion";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 type TimelineDateProps = {
@@ -14,20 +13,12 @@ export default function TimelineDate({
   dateEnd,
   className,
 }: TimelineDateProps) {
-  const [spanRef, animate] = useAnimate();
-  const inView = useInView(spanRef, { once: true, amount: 1 });
-
-  useEffect(() => {
-    if (inView) {
-      animate(spanRef.current, { opacity: 1 }, { duration: 0.5 });
-    }
-  }, [inView, animate, spanRef]);
-
   return (
     <motion.span
-      ref={spanRef}
       className={`font-medium ${className}`}
       initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.7 }}
     >
       {typeof dateEnd === "string" && (
         <>
