@@ -135,7 +135,7 @@ export const educationAndExperience = [
   {
     title: "Second year of University",
     dateBegin: new Date("2023-10-01"),
-    dateEnd: "present",
+    dateEnd: new Date("2024-06-12"),
     description:
       "Second year of the university study programme for Computer and " +
       "Information Science at the University of Ljubljana.",
@@ -147,7 +147,7 @@ export const educationAndExperience = [
     title: "DevRev internship",
     dateBegin: new Date("2024-05-06"),
     dateEnd: "present",
-    description: "Working on the backend of DevRev's marketplace using Go",
+    description: "Working on the backend of DevRev's marketplace using Go.",
     link: "https://devrev.ai/",
     reference: undefined,
     icon: React.createElement(FaServer),
