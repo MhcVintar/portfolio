@@ -61,9 +61,9 @@ export const projects = [
     image: portfolioImage,
   },
   {
-    title: "Holero",
+    title: "Holero backend",
     description:
-      "A social media website that targets car enthusiasts by making it easy " +
+      "A social media mobile app that targets car enthusiasts by making it easy " +
       "to find car meets and car-related events in your area.",
     tags: [
       "Java",
@@ -74,8 +74,6 @@ export const projects = [
       "Expo",
       "TypeScript",
       "React",
-      "Next.js",
-      "Tailwind",
       "Docker",
     ],
     image: holeroImage,
@@ -102,6 +100,7 @@ export const skills = [
   "PostgreSQL",
   "Prisma",
   "Neo4j",
+  "MongoDB",
   "MinIO",
   "Git",
   "Docker",
