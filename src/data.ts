@@ -68,7 +68,7 @@ export const projects = [
     tags: [
       "Java",
       "Spring",
-      "Neo4j",
+      "MongoDB",
       "MinIO",
       "ReactNative",
       "Expo",
@@ -99,7 +99,6 @@ export const skills = [
   "Next.js",
   "PostgreSQL",
   "Prisma",
-  "Neo4j",
   "MongoDB",
   "MinIO",
   "Git",
