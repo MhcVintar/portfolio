@@ -8,7 +8,7 @@ import {
   FaEnvelope,
   FaEnvelopeOpenText,
   FaGithub,
-  FaLinkedin,
+  FaLinkedin
 } from "react-icons/fa";
 import { HiDocument, HiDocumentArrowDown } from "react-icons/hi2";
 import { MotionImage } from "./framer-motion-wrappers";
@@ -38,7 +38,7 @@ export default function Home() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             type: "tween",
-            duration: 0.2,
+            duration: 0.2
           }}
         />
         <motion.div
@@ -47,7 +47,7 @@ export default function Home() {
           transition={{
             type: "spring",
             stiffness: 125,
-            delay: 0.2,
+            delay: 0.2
           }}
         >
           <span
@@ -64,9 +64,8 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
       >
         <b>Hello, my name is Miha.</b> I&apos;m a{" "}
-        <b>computer science student </b>
-        and I love building web applications, especially with <i>React</i>,{" "}
-        <i>Next.js</i> and <i>Spring</i>
+        <b>computer science student</b> who loves <b>backend development</b> with{" "}
+        <b>Spring</b> and also enjoys frontend development with <b>React</b>.
       </motion.h1>
       <motion.ul
         className="flex flex-wrap items-center justify-center gap-2.5"
