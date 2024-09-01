@@ -14,7 +14,7 @@ export const links = [
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
   { name: "Education & Experience", href: "#education-and-experience" },
-  { name: "Contact", href: "#contact" },
+  { name: "Contact", href: "#contact" }
 ] as const;
 
 export const projects = [
@@ -25,7 +25,7 @@ export const projects = [
       "globally. They can easily upload, download, and share their favorite " +
       "tracks, fostering a dynamic community of music lovers.",
     tags: ["React", "Express", "PostgreSQL", "MinIO", "Prisma", "JWT", "Git"],
-    image: musifyImage,
+    image: musifyImage
   },
   {
     title: "Musify Docker deployment",
@@ -33,7 +33,7 @@ export const projects = [
       "Automation of a web app deployment using Docker and Docker " +
       "Compose with continuous integration using GitHub Actions.",
     tags: ["Docker", "Docker Compose", "Nginx", "Git", "PostgreSQL", "MinIO"],
-    image: dockerImage,
+    image: dockerImage
   },
   {
     title: "Musify Kubernetes deployment",
@@ -42,7 +42,7 @@ export const projects = [
       "Kubernetes, with multiple server and web server instances and " +
       "a load balancer.",
     tags: ["Docker", "Kubernetes", "Nginx", "Git", "PostgreSQL", "MinIO"],
-    image: kubernetesImage,
+    image: kubernetesImage
   },
   {
     title: "Sudoku Solver",
@@ -50,7 +50,7 @@ export const projects = [
       "A terminal-based C program utilizing recursive backtracking for " +
       "solving Sudoku puzzles efficiently.",
     tags: ["C"],
-    image: sudokuImage,
+    image: sudokuImage
   },
   {
     title: "Portfolio",
@@ -58,7 +58,7 @@ export const projects = [
       "A modern and responsive web app that showcases my frontend " +
       "abilities and my other computer science accomplishments.",
     tags: ["TypeScript", "React", "Next.js", "Framer Motion", "Tailwind"],
-    image: portfolioImage,
+    image: portfolioImage
   },
   {
     title: "Holero backend",
@@ -67,17 +67,15 @@ export const projects = [
       "to find car meets and car-related events in your area.",
     tags: [
       "Java",
-      "Spring",
+      "Spring WebFlux",
       "MongoDB",
-      "MinIO",
-      "ReactNative",
-      "Expo",
-      "TypeScript",
-      "React",
-      "Docker",
+      "AWS S3",
+      "AWS SES",
+      "OpenAPI",
+      "Docker"
     ],
-    image: holeroImage,
-  },
+    image: holeroImage
+  }
 ] as const;
 
 export const skills = [
@@ -101,10 +99,13 @@ export const skills = [
   "Prisma",
   "MongoDB",
   "MinIO",
+  "AWS S3",
+  "AWS SES",
+  "OpenAPI",
   "Git",
   "Docker",
   "Nginx",
-  "Kubernetes",
+  "Kubernetes"
 ] as const;
 
 export const educationAndExperience = [
@@ -117,7 +118,7 @@ export const educationAndExperience = [
       "Information Science at the University of Ljubljana.",
     link: "https://www.fri.uni-lj.si/en",
     reference: undefined,
-    icon: React.createElement(FaUniversity),
+    icon: React.createElement(FaUniversity)
   },
   {
     title: "iSystem internship",
@@ -128,7 +129,7 @@ export const educationAndExperience = [
       "a testing application for the IDE written in Python and PyQt.",
     link: "https://www.isystemlabs.si/",
     reference: "/references/iSystem-reference.pdf",
-    icon: React.createElement(FaMicrochip),
+    icon: React.createElement(FaMicrochip)
   },
   {
     title: "Second year of University",
@@ -139,7 +140,7 @@ export const educationAndExperience = [
       "Information Science at the University of Ljubljana.",
     link: "https://www.fri.uni-lj.si/en",
     reference: undefined,
-    icon: React.createElement(FaUniversity),
+    icon: React.createElement(FaUniversity)
   },
   {
     title: "DevRev internship",
@@ -148,6 +149,6 @@ export const educationAndExperience = [
     description: "Working on the backend of DevRev's marketplace using Go.",
     link: "https://devrev.ai/",
     reference: undefined,
-    icon: React.createElement(FaServer),
-  },
+    icon: React.createElement(FaServer)
+  }
 ] as const;
