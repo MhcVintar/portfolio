@@ -45,11 +45,13 @@ export const projects = [
     image: kubernetesImage
   },
   {
-    title: "Sudoku Solver",
+    title: "CLI Sudoku",
     description:
-      "A terminal-based C program utilizing recursive backtracking for " +
-      "solving Sudoku puzzles efficiently.",
-    tags: ["C"],
+      "A terminal-based sudoku game written in Go. User can choose " +
+      "between multiple difficulty levels and the game generates a new " +
+      "sudoku puzzle every time. When the puzzle is solved, the user can " +
+      "see their time and the number of mistakes they made.",
+    tags: ["Go", "Git"],
     image: sudokuImage
   },
   {
@@ -105,7 +107,9 @@ export const skills = [
   "Git",
   "Docker",
   "Nginx",
-  "Kubernetes"
+  "Kubernetes",
+  "gRPC",
+  "REST"
 ] as const;
 
 export const educationAndExperience = [
