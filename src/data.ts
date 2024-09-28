@@ -106,9 +106,8 @@ export const skills = [
   "OpenAPI",
   "Git",
   "Docker",
-  "Nginx",
   "Kubernetes",
-  "gRPC",
+  "Protocol Buffers",
   "REST"
 ] as const;
 
@@ -154,5 +153,16 @@ export const educationAndExperience = [
     link: "https://devrev.ai/",
     reference: undefined,
     icon: React.createElement(FaServer)
+  },
+  {
+    title: "Third year of University",
+    dateBegin: new Date("2024-10-01"),
+    dateEnd: "present",
+    description:
+      "Third year of the university study programme for Computer and " +
+      "Information Science at the University of Ljubljana.",
+    link: "https://www.fri.uni-lj.si/en",
+    reference: undefined,
+    icon: React.createElement(FaUniversity)
   }
 ] as const;
