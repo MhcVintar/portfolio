@@ -64,8 +64,9 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
       >
         <b>Hello, my name is Miha.</b> I&apos;m a{" "}
-        <b>computer science student</b> who loves <b>backend development</b> with{" "}
-        <b>Spring</b> and also enjoys frontend development with <b>React</b>.
+        <b>computer and information science student</b> who loves <b>backend{" "}
+        development</b> with <b>Spring</b> and <b>Go</b> and also enjoys{" "}
+        frontend development with <b>React</b>.
       </motion.h1>
       <motion.ul
         className="flex flex-wrap items-center justify-center gap-2.5"
