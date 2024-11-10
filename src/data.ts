@@ -20,12 +20,11 @@ export const projects = [
     title: "Musify",
     description:
       "A web app for users to exchange music files with random people globally. " +
-      "They can easily upload, download, and share their favorite tracks, fostering " +
-      "a dynamic community of music lovers. The deployment is automated using Docker, " +
-      "Docker Compose, and Kubernetes, with continuous integration using GitHub Actions.",
+      "They can easily upload, download, and share their favorite tracks. " +
+      "The deployment is automated using Docker, Docker Compose, and " +
+      " Kubernetes, with continuous integration using GitHub Actions.",
     tags: [
-      "React", "Express", "PostgreSQL", "MinIO", "Prisma", "JWT", "Git",
-      "Docker", "Docker Compose", "Nginx", "Kubernetes"
+      "React", "Express", "PostgreSQL", "MinIO", "Docker", "Nginx", "Kubernetes"
     ],
     image: musifyImage
   },
@@ -36,7 +35,7 @@ export const projects = [
       "between multiple difficulty levels and the game generates a new " +
       "sudoku puzzle every time. When the puzzle is solved, the user can " +
       "see their time and the number of mistakes they made.",
-    tags: ["Go", "Git"],
+    tags: ["Go"],
     image: sudokuImage
   },
   {
@@ -84,7 +83,6 @@ export const skills = [
   "Next.js",
   "Angular",
   "PostgreSQL",
-  "Prisma",
   "MongoDB",
   "MinIO",
   "AWS S3",

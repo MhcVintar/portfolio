@@ -8,15 +8,15 @@ import { useRef } from "react";
 type ProjectCardProps = (typeof projects)[number];
 
 export default function ProjectCard({
-  title,
-  description,
-  tags,
-  image,
-}: ProjectCardProps) {
+                                      title,
+                                      description,
+                                      tags,
+                                      image
+                                    }: ProjectCardProps) {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.1 1"],
+    offset: ["0 1", "1.1 1"]
   });
   const transformedProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
@@ -30,7 +30,7 @@ export default function ProjectCard({
     >
       <div
         className="flex h-3/5 w-full flex-col px-5 py-4 text-left sm:h-full
-        sm:w-1/2 sm:group-odd:translate-x-[19rem]
+        sm:w-1/2 sm:group-odd:translate-x-[19rem] overflow-auto scrollbar-hide
         md:group-odd:translate-x-[21rem] lg:group-odd:translate-x-[22rem]"
       >
         <h3 className="mb-2 text-2xl font-semibold capitalize">{title}</h3>
