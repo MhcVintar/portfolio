@@ -1,12 +1,18 @@
 "use client";
 
-import { useActiveSection } from "@/context/active-section-context";
+import { SectionType, useActiveSection } from "@/context/active-section-context";
 import { links } from "@/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { MouseEvent } from "react";
 
 export default function Header() {
   const { activeSection, setActiveSection } = useActiveSection();
+
+  function handleClick(event: MouseEvent<HTMLAnchorElement>, section: SectionType) {
+    event.currentTarget.blur();
+    setActiveSection(section);
+  }
 
   return (
     <motion.header
@@ -26,7 +32,7 @@ export default function Header() {
             <li key={index}>
               <Link
                 href={link.href}
-                onClick={() => setActiveSection(link.name)}
+                onClick={(event) => handleClick(event, link.name)}
                 className={`rounded-full px-3.5 py-1.5 font-medium outline-none
                 transition hover:bg-blue-200 hover:text-slate-950
                 focus:bg-blue-200 dark:hover:bg-gray-700

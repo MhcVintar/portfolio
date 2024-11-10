@@ -1,6 +1,4 @@
 import musifyImage from "@public/projects/musify.png";
-import dockerImage from "@public/projects/docker-compose.jpg";
-import kubernetesImage from "@public/projects/microk8s.png";
 import sudokuImage from "@public/projects/sudoku.png";
 import portfolioImage from "@public/projects/portfolio.png";
 import holeroImage from "@public/projects/holero.png";
@@ -21,28 +19,15 @@ export const projects = [
   {
     title: "Musify",
     description:
-      "A web app for users to exchange music files with random people " +
-      "globally. They can easily upload, download, and share their favorite " +
-      "tracks, fostering a dynamic community of music lovers.",
-    tags: ["React", "Express", "PostgreSQL", "MinIO", "Prisma", "JWT", "Git"],
+      "A web app for users to exchange music files with random people globally. " +
+      "They can easily upload, download, and share their favorite tracks, fostering " +
+      "a dynamic community of music lovers. The deployment is automated using Docker, " +
+      "Docker Compose, and Kubernetes, with continuous integration using GitHub Actions.",
+    tags: [
+      "React", "Express", "PostgreSQL", "MinIO", "Prisma", "JWT", "Git",
+      "Docker", "Docker Compose", "Nginx", "Kubernetes"
+    ],
     image: musifyImage
-  },
-  {
-    title: "Musify Docker deployment",
-    description:
-      "Automation of a web app deployment using Docker and Docker " +
-      "Compose with continuous integration using GitHub Actions.",
-    tags: ["Docker", "Docker Compose", "Nginx", "Git", "PostgreSQL", "MinIO"],
-    image: dockerImage
-  },
-  {
-    title: "Musify Kubernetes deployment",
-    description:
-      "Automation of a web app deployment and updates using " +
-      "Kubernetes, with multiple server and web server instances and " +
-      "a load balancer.",
-    tags: ["Docker", "Kubernetes", "Nginx", "Git", "PostgreSQL", "MinIO"],
-    image: kubernetesImage
   },
   {
     title: "CLI Sudoku",
@@ -97,6 +82,7 @@ export const skills = [
   "Express",
   "React",
   "Next.js",
+  "Angular",
   "PostgreSQL",
   "Prisma",
   "MongoDB",
