@@ -1,7 +1,7 @@
 import musifyImage from "@public/projects/musify.png";
 import sudokuImage from "@public/projects/sudoku.png";
 import portfolioImage from "@public/projects/portfolio.png";
-import holeroImage from "@public/projects/holero.png";
+import povImage from "@public/projects/pov.png";
 import { FaUniversity } from "react-icons/fa";
 import { FaMicrochip, FaServer } from "react-icons/fa6";
 import React from "react";
@@ -47,20 +47,16 @@ export const projects = [
     image: portfolioImage
   },
   {
-    title: "Holero backend",
+    title: "POV",
     description:
-      "A social media mobile app that targets car enthusiasts by making it easy " +
-      "to find car meets and car-related events in your area.",
+      "Effortlessly turn 4:3 footage into 16:9 or 9:16 with intelligent " +
+      "reframing and adaptive transformation for any screen to make your " +
+      "POV footage shine.",
     tags: [
-      "Java",
-      "Spring WebFlux",
-      "MongoDB",
-      "AWS S3",
-      "AWS SES",
-      "OpenAPI",
-      "Docker"
+      "Swift",
+      "Metal"
     ],
-    image: holeroImage
+    image: povImage
   }
 ] as const;
 
@@ -74,24 +70,18 @@ export const skills = [
   "HTML",
   "CSS",
   "TailwindCSS",
-  "Framer Motion",
   "JavaScript",
   "TypeScript",
   "Node.js",
   "Express",
   "React",
   "Next.js",
-  "Angular",
   "PostgreSQL",
   "MongoDB",
-  "MinIO",
-  "AWS S3",
-  "AWS SES",
-  "OpenAPI",
+  "AWS",
   "Git",
   "Docker",
-  "Kubernetes",
-  "Protocol Buffers",
+  "gRPC",
   "REST"
 ] as const;
 
