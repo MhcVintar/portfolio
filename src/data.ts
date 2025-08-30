@@ -1,10 +1,10 @@
 import musifyImage from "@public/projects/musify.png";
-import sudokuImage from "@public/projects/sudoku.png";
 import portfolioImage from "@public/projects/portfolio.png";
 import povImage from "@public/projects/pov.png";
-import { FaUniversity } from "react-icons/fa";
-import { FaMicrochip, FaServer } from "react-icons/fa6";
+import sudokuImage from "@public/projects/sudoku.png";
 import React from "react";
+import { FaUniversity } from "react-icons/fa";
+import { FaMicrochip, FaRobot, FaServer } from "react-icons/fa6";
 
 export const links = [
   { name: "Home", href: "#home" },
@@ -122,7 +122,7 @@ export const educationAndExperience = [
   {
     title: "DevRev internship",
     dateBegin: new Date("2024-05-06"),
-    dateEnd: "present",
+    dateEnd: new Date("2025-9-30"),
     description: "Working on the backend of DevRev's marketplace using Go.",
     link: "https://devrev.ai/",
     reference: undefined,
@@ -131,10 +131,33 @@ export const educationAndExperience = [
   {
     title: "Third year of University",
     dateBegin: new Date("2024-10-01"),
-    dateEnd: "present",
+    dateEnd: new Date("2025-6-13"),
     description:
       "Third year of the university study programme for Computer and " +
       "Information Science at the University of Ljubljana.",
+    link: "https://www.fri.uni-lj.si/en",
+    reference: undefined,
+    icon: React.createElement(FaUniversity)
+  },
+  {
+    title: "Telosmation",
+    dateBegin: new Date("2025-8-30"),
+    dateEnd: "present",
+    description:
+      "Working as an AI automations engineer and implementing tailored " +
+      "solutions for clients.",
+    link: "https://telosmation.com/",
+    reference: undefined,
+    icon: React.createElement(FaRobot)
+  },
+  {
+    title: "Extra year of University",
+    dateBegin: new Date("2025-10-01"),
+    dateEnd: "present",
+    description:
+      "Extra year of the university study programme for Computer and " +
+      "Information Science at the University of Ljubljana to work on the " +
+      "bachelor's thesis.",
     link: "https://www.fri.uni-lj.si/en",
     reference: undefined,
     icon: React.createElement(FaUniversity)
