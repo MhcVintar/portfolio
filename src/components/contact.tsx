@@ -93,7 +93,7 @@ export default function Contact() {
             self-center rounded-full border border-amber-400 bg-amber-300 px-4
             py-2 font-medium outline-none transition hover:scale-105
             hover:bg-amber-400 hover:text-slate-950 focus:scale-105
-            focus:bg-amber-400 dark:text-slate-900 md:self-start"
+            focus:bg-amber-400 dark:text-slate-900"
           >
             {optActionState === "idle" && (
               <>

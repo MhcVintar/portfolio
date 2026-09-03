@@ -4,14 +4,18 @@ import { projects } from "@/data";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import { useTheme } from "@/hooks";
 
-type ProjectCardProps = (typeof projects)[number];
+type ProjectCardProps = (typeof projects)[number] & {
+  priority?: boolean;
+};
 
 export default function ProjectCard({
   title,
   description,
   tags,
   image,
+  priority,
 }: ProjectCardProps) {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -19,6 +23,7 @@ export default function ProjectCard({
     offset: ["0 1", "1.1 1"],
   });
   const transformedProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+  const theme = useTheme();
 
   return (
     <motion.article
@@ -48,11 +53,13 @@ export default function ProjectCard({
         </ul>
       </div>
       <Image
-        src={image}
+        src={theme === "dark" ? image.dark : image.light}
         alt={title}
         quality={95}
-        className="h-1/3 w-11/12 rounded-tr-xl object-cover transition
-        group-hover:scale-105 sm:absolute sm:top-8 sm:block sm:h-full
+        priority={priority}
+        className="h-1/3 w-11/12 rounded-tr-xl border border-blue-200
+        object-cover transition group-hover:scale-105 dark:border-gray-700
+        sm:absolute sm:top-8 sm:block sm:h-full
         sm:w-[27rem] sm:rounded-t-xl sm:group-odd:-left-40
         sm:group-even:-right-40 sm:group-hover:-translate-y-5
         sm:group-odd:group-hover:translate-x-4

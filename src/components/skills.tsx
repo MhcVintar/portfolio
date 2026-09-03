@@ -26,14 +26,19 @@ export default function Skills() {
     >
       <SectionHeading>My skills</SectionHeading>
       <ul ref={ulRef} className="flex flex-wrap justify-center gap-2">
-        {skills.map((skill, index) => (
+        {skills.map(([name, featured], index) => (
           <motion.li
             key={index}
-            className="rounded-xl border border-blue-200 bg-blue-100 px-4 py-2
-            text-lg dark:border-gray-700 dark:bg-gray-800"
+            className={
+              featured
+                ? `rounded-xl border border-amber-300 bg-amber-200 px-4 py-2
+                  text-lg font-semibold text-slate-900`
+                : `rounded-xl border border-blue-200 bg-blue-100 px-4 py-2
+                  text-lg dark:border-gray-700 dark:bg-gray-800`
+            }
             initial={{ opacity: 0, y: 100 }}
           >
-            {skill}
+            {name}
           </motion.li>
         ))}
       </ul>

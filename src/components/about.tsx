@@ -20,12 +20,11 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-2.5">
-        Greetings! I&apos;m a <strong>{age}-year-old</strong> student currently
-        pursuing a{" "}
+        Greetings! I&apos;m a <strong>{age}-year-old</strong> graduate holding a{" "}
         <strong>
           Bachelor&apos;s degree in Computer Science and Informatics
         </strong>{" "}
-        at the <strong>University of Ljubljana</strong>, following a solid
+        from the <strong>University of Ljubljana</strong>, following a solid
         academic journey at <strong>Gimnazija Franceta Prešerna</strong>.{" "}
         <i>Sporting</i> has been a significant part of my life, with{" "}
         <strong>13 years</strong> dedicated to{" "}
@@ -37,12 +36,12 @@ export default function About() {
       </p>
       <p>
         Beyond the pool, my passion lies in exploring the vast realm of computer
-        science, constantly seeking to <strong>innovate, create</strong>, and{" "}
-        <strong>learn new skills</strong>. Outside of academia, I maintain a
-        healthy lifestyle through activities such as{" "}
-        <strong>mountain biking</strong> and regular{" "}
-        <strong>gym sessions</strong>, fostering a well-rounded approach to
-        personal and professional growth.
+        science, and graduating hasn&apos;t changed that - I&apos;m still
+        constantly seeking to <strong>innovate, create</strong>, and{" "}
+        <strong>learn new skills</strong>. Outside of work, I maintain a healthy
+        lifestyle through activities such as <strong>mountain biking</strong>{" "}
+        and regular <strong>gym sessions</strong>, fostering a well-rounded
+        approach to personal and professional growth.
       </p>
     </motion.section>
   );

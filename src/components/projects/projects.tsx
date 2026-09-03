@@ -19,7 +19,7 @@ export default function Projects() {
       <ul className="flex flex-col items-center gap-y-10">
         {projects.map((project, index) => (
           <li key={index} className="group">
-            <ProjectCard {...project} />
+            <ProjectCard {...project} priority={index === 0} />
           </li>
         ))}
       </ul>

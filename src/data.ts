@@ -1,9 +1,13 @@
-import musifyImage from "@public/projects/musify.png";
-import portfolioImage from "@public/projects/portfolio.png";
-import povImage from "@public/projects/pov.png";
-import sudokuImage from "@public/projects/sudoku.png";
+import portfolioDarkImage from "@public/projects/portfolio-dark.png";
+import portfolioLightImage from "@public/projects/portfolio-light.png";
+import povDarkImage from "@public/projects/pov-dark.png";
+import povLightImage from "@public/projects/pov-light.png";
+import repogenDarkImage from "@public/projects/repogen-dark.png";
+import repogenLightImage from "@public/projects/repogen-light.png";
+import sudokuDarkImage from "@public/projects/sudoku-dark.png";
+import sudokuLightImage from "@public/projects/sudoku-light.png";
 import React from "react";
-import { FaUniversity } from "react-icons/fa";
+import { FaGraduationCap, FaUniversity } from "react-icons/fa";
 import { FaMicrochip, FaRobot, FaServer } from "react-icons/fa6";
 
 export const links = [
@@ -17,76 +21,68 @@ export const links = [
 
 export const projects = [
   {
-    title: "Musify",
+    title: "Repo-Gen",
     description:
-      "A web app for users to exchange music files with random people globally. " +
-      "They can easily upload, download, and share their favorite tracks. " +
-      "The deployment is automated using Docker, Docker Compose, and " +
-      " Kubernetes, with continuous integration using GitHub Actions.",
-    tags: [
-      "React",
-      "Express",
-      "PostgreSQL",
-      "MinIO",
-      "Docker",
-      "Nginx",
-      "Kubernetes",
-    ],
-    image: musifyImage,
-  },
-  {
-    title: "CLI Sudoku",
-    description:
-      "A terminal-based sudoku game written in Go. User can choose " +
-      "between multiple difficulty levels and the game generates a new " +
-      "sudoku puzzle every time. When the puzzle is solved, the user can " +
-      "see their time and the number of mistakes they made.",
-    tags: ["Go"],
-    image: sudokuImage,
-  },
-  {
-    title: "Portfolio",
-    description:
-      "A modern and responsive web app that showcases my frontend " +
-      "abilities and my other computer science accomplishments.",
-    tags: ["TypeScript", "React", "Next.js", "Framer Motion", "Tailwind"],
-    image: portfolioImage,
+      "A code generator for Go that eliminates repetitive repository-layer code by letting you declare data-access methods on an interface, Spring Data JPA style, while the implementation is generated automatically.",
+    tags: ["Go", "SQL"],
+    image: { light: repogenLightImage, dark: repogenDarkImage },
   },
   {
     title: "POV",
     description:
-      "Effortlessly turn 4:3 footage into 16:9 or 9:16 with intelligent " +
-      "reframing and adaptive transformation for any screen to make your " +
-      "POV footage shine.",
+      "An iOS app that uses Metal to enable GPU-accelerated video processing. It effortlessly turns 4:3 footage into 16:9 or 9:16 with intelligent reframing and adaptive transformation for any screen to make your POV footage shine.",
     tags: ["Swift", "Metal"],
-    image: povImage,
+    image: { light: povLightImage, dark: povDarkImage },
+  },
+  {
+    title: "Portfolio",
+    description:
+      "A modern and responsive web app that showcases my frontend abilities and my other computer science accomplishments.",
+    tags: ["TypeScript", "React", "Next.js", "Framer Motion", "Tailwind"],
+    image: { light: portfolioLightImage, dark: portfolioDarkImage },
+  },
+  {
+    title: "Sudoku TUI",
+    description:
+      "A terminal-based Sudoku game written in Go. User can choose between multiple difficulty levels and the game generates a new Sudoku puzzle every time. When the puzzle is solved, the user can see their time and the number of mistakes they made.",
+    tags: ["Go"],
+    image: { light: sudokuLightImage, dark: sudokuDarkImage },
   },
 ] as const;
 
 export const skills = [
-  "Python",
-  "Java",
-  "Spring",
-  "Go",
-  "C",
-  "C++",
-  "HTML",
-  "CSS",
-  "TailwindCSS",
-  "JavaScript",
-  "TypeScript",
-  "Node.js",
-  "Express",
-  "React",
-  "Next.js",
-  "PostgreSQL",
-  "MongoDB",
-  "AWS",
-  "Git",
-  "Docker",
-  "gRPC",
-  "REST",
-] as const;
+  ["AWS", false],
+  ["Azure", true],
+  ["Azure DevOps", false],
+  ["C", false],
+  ["C++", false],
+  ["CSS", false],
+  ["Docker", true],
+  ["Express", false],
+  ["FastAPI", false],
+  ["Git", true],
+  ["GitHub", true],
+  ["Go", true],
+  ["gRPC", false],
+  ["HTML", false],
+  ["Java", true],
+  ["JavaScript", false],
+  ["Kubernetes", false],
+  ["Linux", true],
+  ["MongoDB", true],
+  ["Next.js", false],
+  ["Node.js", false],
+  ["PostgreSQL", true],
+  ["Python", false],
+  ["React", false],
+  ["Rust", false],
+  ["Spring Boot", true],
+  ["SQL", true],
+  ["Swift", false],
+  ["TailwindCSS", false],
+  ["Terraform", false],
+  ["TypeScript", false],
+] as const satisfies [string, boolean][];
 
 export const educationAndExperience = [
   {
@@ -94,8 +90,7 @@ export const educationAndExperience = [
     dateBegin: new Date("2022-10-01"),
     dateEnd: new Date("2023-06-26"),
     description:
-      "First year of the university study programme for Computer and " +
-      "Information Science at the University of Ljubljana.",
+      "First year of the university study programme for Computer and Information Science at the University of Ljubljana.",
     link: "https://www.fri.uni-lj.si/en",
     reference: undefined,
     icon: React.createElement(FaUniversity),
@@ -105,8 +100,7 @@ export const educationAndExperience = [
     dateBegin: new Date("2023-07-11"),
     dateEnd: new Date("2023-09-15"),
     description:
-      "Working on an IDE for embedded systems written in C++ and on " +
-      "a testing application for the IDE written in Python and PyQt.",
+      "Working on an IDE for embedded systems written in C++ and on a testing application for the IDE written in Python and PyQt.",
     link: "https://www.isystemlabs.si/",
     reference: "/references/iSystem-reference.pdf",
     icon: React.createElement(FaMicrochip),
@@ -116,8 +110,7 @@ export const educationAndExperience = [
     dateBegin: new Date("2023-10-01"),
     dateEnd: new Date("2024-06-12"),
     description:
-      "Second year of the university study programme for Computer and " +
-      "Information Science at the University of Ljubljana.",
+      "Second year of the university study programme for Computer and Information Science at the University of Ljubljana.",
     link: "https://www.fri.uni-lj.si/en",
     reference: undefined,
     icon: React.createElement(FaUniversity),
@@ -136,8 +129,7 @@ export const educationAndExperience = [
     dateBegin: new Date("2024-10-01"),
     dateEnd: new Date("2025-6-13"),
     description:
-      "Third year of the university study programme for Computer and " +
-      "Information Science at the University of Ljubljana.",
+      "Third year of the university study programme for Computer and Information Science at the University of Ljubljana.",
     link: "https://www.fri.uni-lj.si/en",
     reference: undefined,
     icon: React.createElement(FaUniversity),
@@ -147,22 +139,19 @@ export const educationAndExperience = [
     dateBegin: new Date("2025-8-30"),
     dateEnd: "present",
     description:
-      "Working as an AI automations engineer and implementing tailored " +
-      "solutions for clients.",
+      "Working as an AI automations engineer, focusing on backend development and implementing tailored solutions for clients.",
     link: "https://telosmation.com/",
     reference: undefined,
     icon: React.createElement(FaRobot),
   },
   {
-    title: "Extra year of University",
+    title: "Bachelor's Thesis",
     dateBegin: new Date("2025-10-01"),
-    dateEnd: "present",
+    dateEnd: new Date("2026-08-26"),
     description:
-      "Extra year of the university study programme for Computer and " +
-      "Information Science at the University of Ljubljana to work on the " +
-      "bachelor's thesis.",
-    link: "https://www.fri.uni-lj.si/en",
+      "Completed my bachelor's thesis, Declarative Generation of Repositories in Go, building Repo-Gen: a Go code generator that cuts hand-written repository code by more than 90%.",
+    link: "https://repozitorij.uni-lj.si/IzpisGradiva.php?id=186061&lang=eng",
     reference: undefined,
-    icon: React.createElement(FaUniversity),
+    icon: React.createElement(FaGraduationCap),
   },
 ] as const;

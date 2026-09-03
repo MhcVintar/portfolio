@@ -1,5 +1,6 @@
 "use client";
 
+import { useSectionInView } from "@/hooks";
 import portrait from "@public/portrait.jpg";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -10,13 +11,10 @@ import {
   FaGithub,
   FaLinkedin,
 } from "react-icons/fa";
-import { HiDocument, HiDocumentArrowDown } from "react-icons/hi2";
 import { MotionImage } from "./framer-motion-wrappers";
-import { useSectionInView } from "@/hooks";
 
 export default function Home() {
   const [isEmailMeHovered, setIsEmailMeHovered] = useState(false);
-  const [isDownloadCVHovered, setIsDownloadCVHovered] = useState(false);
   const sectionRef = useSectionInView("Home", 1);
 
   return (
@@ -64,10 +62,10 @@ export default function Home() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <b>Hello, my name is Miha.</b> I&apos;m a{" "}
-        <b>computer and information science student</b> who loves{" "}
-        <b>backend development</b> with <b>Spring</b> and <b>Go</b> and also
-        enjoys frontend development with <b>React</b>.
+        Hello, my name is <b>Miha Vintar.</b> I&apos;m a{" "}
+        <b>computer and information science graduate</b> who loves{" "}
+        <b>backend development</b> with <b>Spring Boot</b> and <b>Go</b>, and
+        I&apos;m increasingly exploring <b>DevOps</b>.
       </motion.h1>
       <motion.ul
         className="flex flex-wrap items-center justify-center gap-2.5"
@@ -93,12 +91,8 @@ export default function Home() {
         </li>
         <li>
           <a
-            href="/CV.pdf"
-            download
-            onPointerEnter={() => setIsDownloadCVHovered(true)}
-            onPointerLeave={() => setIsDownloadCVHovered(false)}
-            onFocus={() => setIsDownloadCVHovered(true)}
-            onBlur={() => setIsDownloadCVHovered(false)}
+            href="https://linkedin.com/in/miha-vintar-029b4a289/"
+            target="_blank"
             className="flex items-center justify-center gap-x-2 rounded-full
             border border-blue-200 bg-blue-100 px-4 py-2 font-medium
             outline-none transition hover:scale-105 hover:bg-blue-200
@@ -107,22 +101,8 @@ export default function Home() {
             dark:hover:bg-gray-700 dark:hover:text-gray-100
             dark:focus:bg-gray-700 dark:focus:text-gray-100"
           >
-            Download CV
-            {isDownloadCVHovered ? <HiDocumentArrowDown /> : <HiDocument />}
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://linkedin.com/in/miha-vintar-029b4a289/"
-            target="_blank"
-            className="flex items-center justify-center rounded-full border
-            border-blue-200 bg-blue-100 px-2 py-2 outline-none transition
-            hover:scale-110 hover:bg-blue-200 hover:text-slate-950
-            focus:scale-110 focus:bg-blue-200 dark:border-gray-700
-            dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-100
-            dark:focus:bg-gray-700 dark:focus:text-gray-100"
-          >
-            <FaLinkedin className="text-2xl" />
+            Send me a message
+            <FaLinkedin />
           </a>
         </li>
         <li>
