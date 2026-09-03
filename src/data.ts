@@ -12,7 +12,7 @@ export const links = [
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
   { name: "Education & Experience", href: "#education-and-experience" },
-  { name: "Contact", href: "#contact" }
+  { name: "Contact", href: "#contact" },
 ] as const;
 
 export const projects = [
@@ -24,9 +24,15 @@ export const projects = [
       "The deployment is automated using Docker, Docker Compose, and " +
       " Kubernetes, with continuous integration using GitHub Actions.",
     tags: [
-      "React", "Express", "PostgreSQL", "MinIO", "Docker", "Nginx", "Kubernetes"
+      "React",
+      "Express",
+      "PostgreSQL",
+      "MinIO",
+      "Docker",
+      "Nginx",
+      "Kubernetes",
     ],
-    image: musifyImage
+    image: musifyImage,
   },
   {
     title: "CLI Sudoku",
@@ -36,7 +42,7 @@ export const projects = [
       "sudoku puzzle every time. When the puzzle is solved, the user can " +
       "see their time and the number of mistakes they made.",
     tags: ["Go"],
-    image: sudokuImage
+    image: sudokuImage,
   },
   {
     title: "Portfolio",
@@ -44,7 +50,7 @@ export const projects = [
       "A modern and responsive web app that showcases my frontend " +
       "abilities and my other computer science accomplishments.",
     tags: ["TypeScript", "React", "Next.js", "Framer Motion", "Tailwind"],
-    image: portfolioImage
+    image: portfolioImage,
   },
   {
     title: "POV",
@@ -52,12 +58,9 @@ export const projects = [
       "Effortlessly turn 4:3 footage into 16:9 or 9:16 with intelligent " +
       "reframing and adaptive transformation for any screen to make your " +
       "POV footage shine.",
-    tags: [
-      "Swift",
-      "Metal"
-    ],
-    image: povImage
-  }
+    tags: ["Swift", "Metal"],
+    image: povImage,
+  },
 ] as const;
 
 export const skills = [
@@ -82,7 +85,7 @@ export const skills = [
   "Git",
   "Docker",
   "gRPC",
-  "REST"
+  "REST",
 ] as const;
 
 export const educationAndExperience = [
@@ -95,7 +98,7 @@ export const educationAndExperience = [
       "Information Science at the University of Ljubljana.",
     link: "https://www.fri.uni-lj.si/en",
     reference: undefined,
-    icon: React.createElement(FaUniversity)
+    icon: React.createElement(FaUniversity),
   },
   {
     title: "iSystem internship",
@@ -106,7 +109,7 @@ export const educationAndExperience = [
       "a testing application for the IDE written in Python and PyQt.",
     link: "https://www.isystemlabs.si/",
     reference: "/references/iSystem-reference.pdf",
-    icon: React.createElement(FaMicrochip)
+    icon: React.createElement(FaMicrochip),
   },
   {
     title: "Second year of University",
@@ -117,7 +120,7 @@ export const educationAndExperience = [
       "Information Science at the University of Ljubljana.",
     link: "https://www.fri.uni-lj.si/en",
     reference: undefined,
-    icon: React.createElement(FaUniversity)
+    icon: React.createElement(FaUniversity),
   },
   {
     title: "DevRev internship",
@@ -126,7 +129,7 @@ export const educationAndExperience = [
     description: "Working on the backend of DevRev's marketplace using Go.",
     link: "https://devrev.ai/",
     reference: undefined,
-    icon: React.createElement(FaServer)
+    icon: React.createElement(FaServer),
   },
   {
     title: "Third year of University",
@@ -137,7 +140,7 @@ export const educationAndExperience = [
       "Information Science at the University of Ljubljana.",
     link: "https://www.fri.uni-lj.si/en",
     reference: undefined,
-    icon: React.createElement(FaUniversity)
+    icon: React.createElement(FaUniversity),
   },
   {
     title: "Telosmation",
@@ -148,7 +151,7 @@ export const educationAndExperience = [
       "solutions for clients.",
     link: "https://telosmation.com/",
     reference: undefined,
-    icon: React.createElement(FaRobot)
+    icon: React.createElement(FaRobot),
   },
   {
     title: "Extra year of University",
@@ -160,6 +163,6 @@ export const educationAndExperience = [
       "bachelor's thesis.",
     link: "https://www.fri.uni-lj.si/en",
     reference: undefined,
-    icon: React.createElement(FaUniversity)
-  }
+    icon: React.createElement(FaUniversity),
+  },
 ] as const;

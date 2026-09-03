@@ -1,6 +1,9 @@
 "use client";
 
-import { SectionType, useActiveSection } from "@/context/active-section-context";
+import {
+  SectionType,
+  useActiveSection,
+} from "@/context/active-section-context";
 import { links } from "@/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -9,7 +12,10 @@ import { MouseEvent } from "react";
 export default function Header() {
   const { activeSection, setActiveSection } = useActiveSection();
 
-  function handleClick(event: MouseEvent<HTMLAnchorElement>, section: SectionType) {
+  function handleClick(
+    event: MouseEvent<HTMLAnchorElement>,
+    section: SectionType,
+  ) {
     event.currentTarget.blur();
     setActiveSection(section);
   }

@@ -1,40 +1,54 @@
 "use client";
 
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { LuMoon, LuSun, LuSunMedium } from "react-icons/lu";
 
 type Theme = "light" | "dark";
 
+const THEME_STORAGE_KEY = "theme";
+const themeListeners = new Set<() => void>();
+
+function readTheme(): Theme {
+  const stored = window.localStorage.getItem(THEME_STORAGE_KEY) as Theme | null;
+  if (stored) {
+    return stored;
+  }
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+}
+
+// The server has no localStorage/matchMedia to read, so it always renders
+// "light"; useSyncExternalStore then reconciles to the real client value
+// right after hydration without us calling setState from an effect.
+function getServerTheme(): Theme {
+  return "light";
+}
+
+function subscribe(callback: () => void) {
+  themeListeners.add(callback);
+  return () => themeListeners.delete(callback);
+}
+
+function writeTheme(theme: Theme) {
+  window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+  themeListeners.forEach((listener) => listener());
+}
+
 export default function ThemeSwitcher() {
-  const [theme, setTheme] = useState<Theme>("light");
+  const theme = useSyncExternalStore(subscribe, readTheme, getServerTheme);
   const [isHovered, setIsHovered] = useState(false);
 
+  // Keep the <html> class in sync with the resolved theme. This is a plain
+  // DOM side effect (no setState involved), which is exactly what effects
+  // are meant for.
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+  }, [theme]);
+
   const handleClick = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      window.localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
-      window.localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("dark");
-    }
+    writeTheme(theme === "light" ? "dark" : "light");
   };
-
-  useLayoutEffect(() => {
-    const localTheme = window.localStorage.getItem("theme") as Theme | null;
-
-    if (localTheme) {
-      setTheme(localTheme);
-
-      if (localTheme === "dark") {
-        document.documentElement.classList.add("dark");
-      }
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
 
   return (
     <button
