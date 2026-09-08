@@ -1,6 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* Tailwind v4 defaults `dark:` to a prefers-color-scheme media query; this
+   project toggles a `dark` class on <html> instead (see theme-switcher.tsx),
+   so restore the v3 class-based strategy. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --background-image-circuit-board: url(../../public/circuit-board.svg);
+  --background-image-circuit-board-dark: url(../../public/circuit-board-dark.svg);
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
+}
 
 .scrollbar-hide {
   -ms-overflow-style: none; /* Internet Explorer 10+ */

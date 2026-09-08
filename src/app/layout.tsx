@@ -22,16 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${inter.className} flex justify-center
-        bg-blue-200 bg-circuit-board text-slate-900
-        dark:bg-gray-800 dark:bg-circuit-board-dark dark:text-gray-50`}
+        className={`${inter.className} bg-circuit-board dark:bg-circuit-board-dark flex justify-center bg-blue-200 text-slate-900 dark:bg-gray-800 dark:text-gray-50`}
       >
         <ActiveSectionContextProvider>
-          <div
-            className="relative flex w-full flex-col items-center
-            bg-white pb-4 dark:bg-gray-900 md:py-4 lg:my-16 lg:w-[initial]
-            lg:rounded-2xl lg:px-16 xl:my-32 xl:px-20 2xl:my-40 2xl:px-40"
-          >
+          <div className="relative flex w-full flex-col items-center bg-white pb-4 md:py-4 lg:my-16 lg:w-[initial] lg:rounded-2xl lg:px-16 xl:my-32 xl:px-20 2xl:my-40 2xl:px-40 dark:bg-gray-900">
             <Header />
             {children}
             <Footer />
