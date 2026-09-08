@@ -38,10 +38,12 @@ export default function About() {
         Beyond the pool, my passion lies in exploring the vast realm of computer
         science, and graduating hasn&apos;t changed that - I&apos;m still
         constantly seeking to <strong>innovate, create</strong>, and{" "}
-        <strong>learn new skills</strong>. Outside of work, I maintain a healthy
-        lifestyle through activities such as <strong>mountain biking</strong>{" "}
-        and regular <strong>gym sessions</strong>, fostering a well-rounded
-        approach to personal and professional growth.
+        <strong>learn new skills</strong>. I&apos;m also a proud member of{" "}
+        <strong>Mensa</strong>, the international high IQ society. Outside of
+        work, I maintain a healthy lifestyle through activities such as{" "}
+        <strong>mountain biking</strong> and regular{" "}
+        <strong>gym sessions</strong>, fostering a well-rounded approach to
+        personal and professional growth.
       </p>
     </motion.section>
   );
