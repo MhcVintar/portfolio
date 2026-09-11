@@ -1,10 +1,10 @@
 "use client";
 
+import { skills } from "@/data";
+import { useSectionInView } from "@/hooks";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
 import SectionHeading from "./section-heading";
-import { skills } from "@/data";
-import { useSectionInView } from "@/hooks";
 
 export default function Skills() {
   const [ulRef, animate] = useAnimate();
@@ -23,7 +23,7 @@ export default function Skills() {
       ref={sectionRef}
       className="mb-32 w-full scroll-mt-24 px-2 text-center sm:w-[38rem] sm:px-0 md:w-[45rem] lg:w-[50rem] xl:w-[55rem]"
     >
-      <SectionHeading>My skills</SectionHeading>
+      <SectionHeading>Skills</SectionHeading>
       <ul ref={ulRef} className="flex flex-wrap justify-center gap-2">
         {skills.map(([name, featured], index) => (
           <motion.li

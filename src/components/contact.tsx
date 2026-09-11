@@ -63,7 +63,7 @@ export default function Contact() {
         <form
           ref={formRef}
           action={handleSubmit}
-          className="my-3 flex flex-col gap-y-3"
+          className="my-3 flex flex-col gap-y-3 px-2 sm:px-0"
         >
           <input
             type="email"

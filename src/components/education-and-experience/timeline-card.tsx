@@ -3,7 +3,7 @@
 import { educationAndExperience } from "@/data";
 import { motion, useAnimate, useInView } from "framer-motion";
 import { useEffect, useSyncExternalStore } from "react";
-import { FaEye, FaLink } from "react-icons/fa";
+import TimelineCardLink from "./timeline-card-link";
 
 type TimelineCardProps = (typeof educationAndExperience)[number] & {
   parity: "odd" | "even";
@@ -23,8 +23,7 @@ function getSnapshot() {
 export default function TimelineCard({
   title,
   description,
-  link,
-  reference,
+  links,
   parity,
 }: TimelineCardProps) {
   const [sectionRef, animate] = useAnimate();
@@ -49,24 +48,9 @@ export default function TimelineCard({
       <h3 className="mb-2 text-2xl font-semibold">{title}</h3>
       <p className="mb-5 sm:mb-0">{description}</p>
       <div className="mt-auto flex flex-col gap-2 lg:flex-row">
-        <a
-          href={link}
-          target="_blank"
-          className="flex w-fit items-center gap-x-2 rounded-full border border-amber-300 bg-amber-200 px-3 py-0.5 text-slate-900 transition outline-none hover:scale-105 hover:bg-amber-300 hover:text-slate-950 focus:scale-105 focus:bg-amber-300"
-        >
-          Visit website
-          <FaLink className="text-sm" />
-        </a>
-        {reference && (
-          <a
-            href={reference}
-            target="_blank"
-            className="group/reference flex w-fit items-center gap-x-2 rounded-full border border-amber-300 bg-amber-200 px-3 py-0.5 text-slate-900 transition outline-none hover:scale-105 hover:bg-amber-300 hover:text-slate-950 focus:scale-105 focus:bg-amber-300"
-          >
-            View reference
-            <FaEye className="transition group-hover/reference:scale-125" />
-          </a>
-        )}
+        {links.map((item) => (
+          <TimelineCardLink key={item.link} {...item} />
+        ))}
       </div>
     </motion.section>
   );

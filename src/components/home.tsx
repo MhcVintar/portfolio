@@ -75,20 +75,24 @@ export default function Home() {
             onPointerLeave={() => setIsEmailMeHovered(false)}
             onFocus={() => setIsEmailMeHovered(true)}
             onBlur={() => setIsEmailMeHovered(false)}
-            className="flex cursor-pointer items-center justify-center gap-x-2 rounded-full border border-amber-400 bg-amber-300 px-4 py-2 font-medium transition outline-none hover:scale-105 hover:bg-amber-400 hover:text-slate-950 focus:scale-105 focus:bg-amber-400 focus:text-slate-950 dark:text-slate-900"
+            className="group flex cursor-pointer items-center justify-center gap-x-2 rounded-full border border-amber-400 bg-amber-300 px-4 py-2 font-medium transition outline-none hover:scale-105 hover:bg-amber-400 hover:text-slate-950 focus:scale-105 focus:bg-amber-400 focus:text-slate-950 dark:text-slate-900"
           >
             Send me an email
-            {isEmailMeHovered ? <FaEnvelopeOpenText /> : <FaEnvelope />}
+            {isEmailMeHovered ? (
+              <FaEnvelopeOpenText className="transition group-hover:scale-110" />
+            ) : (
+              <FaEnvelope className="transition group-hover:scale-110" />
+            )}
           </Link>
         </li>
         <li>
           <a
             href="https://linkedin.com/in/miha-vintar-029b4a289/"
             target="_blank"
-            className="flex items-center justify-center gap-x-2 rounded-full border border-blue-200 bg-blue-100 px-4 py-2 font-medium transition outline-none hover:scale-105 hover:bg-blue-200 hover:text-slate-950 focus:scale-105 focus:bg-blue-200 focus:text-slate-950 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-100 dark:focus:bg-gray-700 dark:focus:text-gray-100"
+            className="group flex items-center justify-center gap-x-2 rounded-full border border-blue-200 bg-blue-100 px-4 py-2 font-medium transition outline-none hover:scale-105 hover:bg-blue-200 hover:text-slate-950 focus:scale-105 focus:bg-blue-200 focus:text-slate-950 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-100 dark:focus:bg-gray-700 dark:focus:text-gray-100"
           >
             Send me a message
-            <FaLinkedin />
+            <FaLinkedin className="transition group-hover:scale-110" />
           </a>
         </li>
         <li>
