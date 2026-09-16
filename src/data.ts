@@ -59,7 +59,7 @@ export const projects = [
   {
     title: "POV",
     description:
-      "An iOS app that uses Metal to enable GPU-accelerated video processing. It effortlessly turns 4:3 footage into 16:9 or 9:16 with intelligent reframing and adaptive transformation for any screen to make your POV footage shine.",
+      "An iOS app using hardware-accelerated rendering for fast video processing. It effortlessly turns 4:3 footage into 16:9 or 9:16 with intelligent reframing and adaptive transformation for any screen to make your POV footage shine.",
     tags: ["Metal", "Swift"],
     image: { light: povLightImage, dark: povDarkImage },
     link: {
