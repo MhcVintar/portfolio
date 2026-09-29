@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "fmt": "prettier --write ."
+    "fmt": "prettier --write .",
+    "default": "npm ci && npm run fmt && npm run build"
   },
   "dependencies": {
     "framer-motion": "^13.4.0",
