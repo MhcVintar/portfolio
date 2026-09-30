@@ -10,12 +10,12 @@
     "default": "npm ci && npm run fmt && npm run build"
   },
   "dependencies": {
-    "framer-motion": "^13.4.0",
-    "next": "^16.3.5",
+    "framer-motion": "^13.4.4",
+    "next": "^16.3.6",
     "react": "^19",
     "react-dom": "^19",
     "react-icons": "^5.7.0",
-    "resend": "^6.28.1"
+    "resend": "^6.30.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
@@ -24,7 +24,7 @@
     "@types/react-dom": "^19",
     "autoprefixer": "^10.6.1",
     "postcss": "^8",
-    "prettier": "^3.9.8",
+    "prettier": "^3.9.9",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "tailwindcss": "^4.3.3",
     "typescript": "^7"
