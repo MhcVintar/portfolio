@@ -144,11 +144,11 @@ function referenceLink(url: string) {
 
 export const educationAndExperience = [
   {
-    title: "First year of University",
+    title: "First year of Bachelor's",
     dateBegin: new Date("2022-10-01"),
     dateEnd: new Date("2023-06-26"),
     description:
-      "First year of the university study programme for Computer and Information Science at the University of Ljubljana.",
+      "First year of the undergraduate university study programme for Computer and Information Science at the University of Ljubljana.",
     links: [websiteLink("https://www.fri.uni-lj.si/en")],
     icon: React.createElement(FaUniversity),
   },
@@ -160,16 +160,16 @@ export const educationAndExperience = [
       "Working on an IDE for embedded systems written in C++ and on a testing application for the IDE written in Python and PyQt.",
     links: [
       websiteLink("https://www.isystemlabs.si/"),
-      referenceLink("/references/iSystem-reference.pdf"),
+      referenceLink("/references/iSystem.pdf"),
     ],
     icon: React.createElement(FaMicrochip),
   },
   {
-    title: "Second year of University",
+    title: "Second year of Bachelor's",
     dateBegin: new Date("2023-10-01"),
     dateEnd: new Date("2024-06-12"),
     description:
-      "Second year of the university study programme for Computer and Information Science at the University of Ljubljana.",
+      "Second year of the undergraduate university study programme for Computer and Information Science at the University of Ljubljana.",
     links: [websiteLink("https://www.fri.uni-lj.si/en")],
     icon: React.createElement(FaUniversity),
   },
@@ -182,21 +182,24 @@ export const educationAndExperience = [
     icon: React.createElement(FaServer),
   },
   {
-    title: "Third year of University",
+    title: "Third year of Bachelor's",
     dateBegin: new Date("2024-10-01"),
     dateEnd: new Date("2025-6-13"),
     description:
-      "Third year of the university study programme for Computer and Information Science at the University of Ljubljana.",
+      "Third year of the undergraduate university study programme for Computer and Information Science at the University of Ljubljana.",
     links: [websiteLink("https://www.fri.uni-lj.si/en")],
     icon: React.createElement(FaUniversity),
   },
   {
     title: "Telosmation",
     dateBegin: new Date("2025-8-30"),
-    dateEnd: "present",
+    dateEnd: new Date("2026-9-30"),
     description:
       "Working as an AI automations engineer, focusing on backend development and implementing tailored solutions for clients.",
-    links: [websiteLink("https://telosmation.com/")],
+    links: [
+      websiteLink("https://telosmation.com/"),
+      referenceLink("/references/Telosmation.pdf"),
+    ],
     icon: React.createElement(FaRobot),
   },
   {
@@ -215,5 +218,14 @@ export const educationAndExperience = [
       },
     ],
     icon: React.createElement(FaGraduationCap),
+  },
+  {
+    title: "First year of Master's",
+    dateBegin: new Date("2026-10-01"),
+    dateEnd: "present",
+    description:
+      "First year of the master's study programme for Computer and Information Science at the University of Ljubljana.",
+    links: [websiteLink("https://www.fri.uni-lj.si/en")],
+    icon: React.createElement(FaUniversity),
   },
 ] as const;
