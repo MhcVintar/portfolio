@@ -144,15 +144,6 @@ function referenceLink(url: string) {
 
 export const educationAndExperience = [
   {
-    title: "First year of Bachelor's",
-    dateBegin: new Date("2022-10-01"),
-    dateEnd: new Date("2023-06-26"),
-    description:
-      "First year of the undergraduate university study programme for Computer and Information Science at the University of Ljubljana.",
-    links: [websiteLink("https://www.fri.uni-lj.si/en")],
-    icon: React.createElement(FaUniversity),
-  },
-  {
     title: "iSystem internship",
     dateBegin: new Date("2023-07-11"),
     dateEnd: new Date("2023-09-15"),
@@ -165,50 +156,21 @@ export const educationAndExperience = [
     icon: React.createElement(FaMicrochip),
   },
   {
-    title: "Second year of Bachelor's",
-    dateBegin: new Date("2023-10-01"),
-    dateEnd: new Date("2024-06-12"),
-    description:
-      "Second year of the undergraduate university study programme for Computer and Information Science at the University of Ljubljana.",
-    links: [websiteLink("https://www.fri.uni-lj.si/en")],
-    icon: React.createElement(FaUniversity),
-  },
-  {
     title: "DevRev internship",
     dateBegin: new Date("2024-05-06"),
-    dateEnd: new Date("2025-9-30"),
+    dateEnd: new Date("2025-09-30"),
     description: "Working on the backend of DevRev's marketplace using Go.",
     links: [websiteLink("https://devrev.ai/")],
     icon: React.createElement(FaServer),
   },
   {
-    title: "Third year of Bachelor's",
-    dateBegin: new Date("2024-10-01"),
-    dateEnd: new Date("2025-6-13"),
-    description:
-      "Third year of the undergraduate university study programme for Computer and Information Science at the University of Ljubljana.",
-    links: [websiteLink("https://www.fri.uni-lj.si/en")],
-    icon: React.createElement(FaUniversity),
-  },
-  {
-    title: "Telosmation",
-    dateBegin: new Date("2025-8-30"),
-    dateEnd: new Date("2026-9-30"),
-    description:
-      "Working as an AI automations engineer, focusing on backend development and implementing tailored solutions for clients.",
-    links: [
-      websiteLink("https://telosmation.com/"),
-      referenceLink("/references/Telosmation.pdf"),
-    ],
-    icon: React.createElement(FaRobot),
-  },
-  {
-    title: "Bachelor's Thesis",
-    dateBegin: new Date("2025-10-01"),
+    title: "Bachelor's degree",
+    dateBegin: new Date("2022-10-01"),
     dateEnd: new Date("2026-08-26"),
     description:
-      "Completed my bachelor's thesis, Declarative Generation of Repositories in Go, building Repo-Gen: a Go code generator that cuts hand-written repository code by more than 90%.",
+      "Completed my bachelor's degree in Computer and Information Science at the University of Ljubljana, with my thesis, Declarative Generation of Repositories in Go.",
     links: [
+      websiteLink("https://www.fri.uni-lj.si/en"),
       {
         text: "Thesis",
         icon: React.createElement(FaGraduationCap, {
@@ -220,7 +182,19 @@ export const educationAndExperience = [
     icon: React.createElement(FaGraduationCap),
   },
   {
-    title: "First year of Master's",
+    title: "Telosmation",
+    dateBegin: new Date("2025-08-30"),
+    dateEnd: new Date("2026-09-30"),
+    description:
+      "Working as an AI automations engineer, focusing on backend development and implementing tailored solutions for clients.",
+    links: [
+      websiteLink("https://telosmation.com/"),
+      referenceLink("/references/Telosmation.pdf"),
+    ],
+    icon: React.createElement(FaRobot),
+  },
+  {
+    title: "Master's degree",
     dateBegin: new Date("2026-10-01"),
     dateEnd: "present",
     description:
