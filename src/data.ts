@@ -63,8 +63,8 @@ export const projects = [
     tags: ["Metal", "Swift"],
     image: { light: povLightImage, dark: povDarkImage },
     link: {
-      icon: React.createElement(FaGitAlt),
-      href: "https://github.com/MhcVintar/pov",
+      icon: React.createElement(FaGlobe),
+      href: "https://mhcvintar.github.io/pov-website",
     },
   },
   {
