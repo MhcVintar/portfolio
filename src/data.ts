@@ -46,17 +46,6 @@ export const projects = [
     },
   },
   {
-    title: "Repo-Gen",
-    description:
-      "A code generator for Go that eliminates repetitive repository-layer code by letting you declare data-access methods on an interface, Spring Data JPA style, while the implementation is generated automatically.",
-    tags: ["Go", "SQL"],
-    image: { light: repogenLightImage, dark: repogenDarkImage },
-    link: {
-      icon: React.createElement(FaGitAlt),
-      href: "https://github.com/MhcVintar/repogen",
-    },
-  },
-  {
     title: "POV",
     description:
       "An iOS app using hardware-accelerated rendering for fast video processing. It effortlessly turns 4:3 footage into 16:9 or 9:16 with intelligent reframing and adaptive transformation for any screen to make your POV footage shine.",
@@ -65,6 +54,17 @@ export const projects = [
     link: {
       icon: React.createElement(FaGlobe),
       href: "https://mhcvintar.github.io/pov-website",
+    },
+  },
+  {
+    title: "Repo-Gen",
+    description:
+      "A code generator for Go that eliminates repetitive repository-layer code by letting you declare data-access methods on an interface, Spring Data JPA style, while the implementation is generated automatically.",
+    tags: ["Go", "SQL"],
+    image: { light: repogenLightImage, dark: repogenDarkImage },
+    link: {
+      icon: React.createElement(FaGitAlt),
+      href: "https://github.com/MhcVintar/repogen",
     },
   },
   {
