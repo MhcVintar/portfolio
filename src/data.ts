@@ -98,7 +98,7 @@ export const skills = [
   ["Docker", true],
   ["Express", false],
   ["FastAPI", false],
-  ["FHIR", true],
+  ["FHIR", false],
   ["Git", true],
   ["GitHub", true],
   ["Go", true],
