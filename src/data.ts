@@ -103,6 +103,7 @@ export const skills = [
   ["GitHub", true],
   ["Go", true],
   ["gRPC", false],
+  ["Helm", false],
   ["HTML", false],
   ["Java", true],
   ["JavaScript", false],
