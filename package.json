@@ -10,15 +10,15 @@
     "default": "npm ci && npm run fmt && npm run build"
   },
   "dependencies": {
-    "framer-motion": "^14.9.0",
-    "next": "^16.4.3",
+    "framer-motion": "^14.10.1",
+    "next": "^16.4.5",
     "react": "^19",
     "react-dom": "^19",
     "react-icons": "^5.7.0",
     "resend": "^6.37.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.3.3",
+    "@tailwindcss/postcss": "^4.3.5",
     "@types/node": "^26",
     "@types/react": "^19",
     "@types/react-dom": "^19",
